@@ -23,7 +23,7 @@ function renderShell() {
   const header = h("header", null,
     h("span", { class: "logo" }, "⚒ KernelForge — Analyzers"),
     h("span", { class: "spacer" }),
-    h("span", { class: "dim", style: "font-size:12px" }, "Driver Analyzer · Linux Analyzer · Ghidra"),
+    h("span", { class: "dim", style: "font-size:12px" }, "Driver Analyzer · Linux Analyzer"),
   );
   app.append(header, h("div", { id: "layout" },
     h("aside", { id: "sidebar" }),
@@ -50,14 +50,6 @@ function renderSidebar() {
     },
   }, "🐧 Linux Driver Analyzer (.ko)");
   sidebar.append(linuxAnalyzerBtn);
-  const analysisBtn = h("button", {
-    class: "tool",
-    onclick: async () => {
-      const { openAnalysis } = await import("../../web/src/analysis.js");
-      openAnalysis(null);
-    },
-  }, "⚗ Ghidra Analysis");
-  sidebar.append(analysisBtn);
 
   sidebar.append(h("div", { class: "dim", style: "margin:16px 4px 8px;font-size:12px;line-height:1.5" },
     "Standalone analyzer deployment — no course lessons, no flags. Upload any x64 .sys or .ko, run DriverEntry/init_module, drive IOCTLs/file_ops, fuzz + concolic + Find Bugs. All client-side."
@@ -73,14 +65,13 @@ function renderWelcome() {
     h("div", { class: "card" },
       h("h1", null, "Driver Analyzers"),
       h("p", null, "Upload any x64 Windows driver (.sys) or Linux LKM (.ko) — it is manual-mapped into the emulated kernel, every import resolves (modeled or stubbed), DriverEntry/init_module runs under SEH, deferred work drains, and you can drive MajorFunction/file_operations with scripted IOCTLs. All client-side; nothing leaves this tab."),
-      h("p", { class: "dim" }, "Pick a tool from the sidebar. For the full course labs (DKOM, IRQL, hooks, pool, SMM, Sauer, v86, Ghidra), visit the class site."),
+      h("p", { class: "dim" }, "Pick a tool from the sidebar. For the full course labs (DKOM, IRQL, hooks, pool, SMM, Sauer, v86), visit the class site."),
     ),
     h("div", { class: "card" },
       h("h2", null, "Quick start"),
       h("ul", null,
         h("li", null, "Windows: Driver Analyzer → pick .sys → Load & run DriverEntry → Send IOCTL / Auto-drive IRPs → Find Bugs"),
         h("li", null, "Linux: Linux Analyzer → pick .ko → Load & run init_module → Send FileOp / Auto-drive ops → Find Bugs"),
-        h("li", null, "Ghidra: Tools → Ghidra Analysis (function list, CFG, decompiler)"),
       ),
     ),
   );

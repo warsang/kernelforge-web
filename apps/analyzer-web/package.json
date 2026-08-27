@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@kernelforge/debugger-ui": "^0.1.0",
-    "@kernelforge/ghidra-decompiler": "^0.1.0",
     "@kernelforge/ntsim": "^0.1.0",
     "@kernelforge/ntsim-analyzer": "^0.1.0",
     "@kernelforge/linux-sim": "^0.1.0",
