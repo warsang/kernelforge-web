@@ -54,7 +54,7 @@ function renderSidebar() {
   sidebar.append(h("div", { class: "dim", style: "margin:16px 4px 8px;font-size:12px;line-height:1.5" },
     "Standalone analyzer deployment — no course lessons, no flags. Upload any x64 .sys or .ko, run DriverEntry/init_module, drive IOCTLs/file_ops, fuzz + concolic + Find Bugs. All client-side."
   ));
-  const backLink = h("a", { href: "https://kernelforge.pages.dev", target: "_blank", class: "dim", style: "margin:8px 4px;font-size:12px;display:block" }, "→ Full KernelForge class →");
+  const backLink = h("a", { href: "https://kernelforge-3kd.pages.dev", target: "_blank", class: "dim", style: "margin:8px 4px;font-size:12px;display:block" }, "→ Full KernelForge class →");
   sidebar.append(backLink);
 }
 
