@@ -1,0 +1,198 @@
+{
+ "name": "KDPC",
+ "totalSize": 64,
+ "fieldCount": 11,
+ "fieldsByName": {
+  "TargetInfoAsUlong": {
+   "name": "TargetInfoAsUlong",
+   "offset": 0,
+   "decl": "ULONG TargetInfoAsUlong",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Type": {
+   "name": "Type",
+   "offset": 0,
+   "decl": "UCHAR Type",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Importance": {
+   "name": "Importance",
+   "offset": 1,
+   "decl": "UCHAR Importance",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Number": {
+   "name": "Number",
+   "offset": 2,
+   "decl": "volatile USHORT Number",
+   "base": "volatile USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DpcListEntry": {
+   "name": "DpcListEntry",
+   "offset": 8,
+   "decl": "struct _SINGLE_LIST_ENTRY DpcListEntry",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ProcessorHistory": {
+   "name": "ProcessorHistory",
+   "offset": 16,
+   "decl": "ULONGLONG ProcessorHistory",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DeferredContext": {
+   "name": "DeferredContext",
+   "offset": 32,
+   "decl": "VOID* DeferredContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SystemArgument1": {
+   "name": "SystemArgument1",
+   "offset": 40,
+   "decl": "VOID* SystemArgument1",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SystemArgument2": {
+   "name": "SystemArgument2",
+   "offset": 48,
+   "decl": "VOID* SystemArgument2",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "DpcData": {
+   "name": "DpcData",
+   "offset": 56,
+   "decl": "VOID* DpcData",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "TargetInfoAsUlong",
+   "offset": 0,
+   "decl": "ULONG TargetInfoAsUlong",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Type",
+   "offset": 0,
+   "decl": "UCHAR Type",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Importance",
+   "offset": 1,
+   "decl": "UCHAR Importance",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Number",
+   "offset": 2,
+   "decl": "volatile USHORT Number",
+   "base": "volatile USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DpcListEntry",
+   "offset": 8,
+   "decl": "struct _SINGLE_LIST_ENTRY DpcListEntry",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProcessorHistory",
+   "offset": 16,
+   "decl": "ULONGLONG ProcessorHistory",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 24,
+   "decl": "VOID (*DeferredRoutine)(struct _KDPC* arg1, VOID* arg2, VOID* arg3, VOID* arg4)",
+   "base": "VOID (*DeferredRoutine)(struct _KDPC* arg1, VOID* arg2, VOID* arg3, VOID* arg4)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DeferredContext",
+   "offset": 32,
+   "decl": "VOID* DeferredContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SystemArgument1",
+   "offset": 40,
+   "decl": "VOID* SystemArgument1",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SystemArgument2",
+   "offset": 48,
+   "decl": "VOID* SystemArgument2",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DpcData",
+   "offset": 56,
+   "decl": "VOID* DpcData",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

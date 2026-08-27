@@ -1,0 +1,936 @@
+{
+ "name": "KPROCESS",
+ "totalSize": 1080,
+ "fieldCount": 58,
+ "fieldsByName": {
+  "Header": {
+   "name": "Header",
+   "offset": 0,
+   "decl": "struct _DISPATCHER_HEADER Header",
+   "base": "struct _DISPATCHER_HEADER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ProfileListHead": {
+   "name": "ProfileListHead",
+   "offset": 24,
+   "decl": "struct _LIST_ENTRY ProfileListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DirectoryTableBase": {
+   "name": "DirectoryTableBase",
+   "offset": 40,
+   "decl": "ULONGLONG DirectoryTableBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ThreadListHead": {
+   "name": "ThreadListHead",
+   "offset": 48,
+   "decl": "struct _LIST_ENTRY ThreadListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ProcessLock": {
+   "name": "ProcessLock",
+   "offset": 64,
+   "decl": "ULONG ProcessLock",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ProcessTimerDelay": {
+   "name": "ProcessTimerDelay",
+   "offset": 68,
+   "decl": "ULONG ProcessTimerDelay",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DeepFreezeStartTime": {
+   "name": "DeepFreezeStartTime",
+   "offset": 72,
+   "decl": "ULONGLONG DeepFreezeStartTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Affinity": {
+   "name": "Affinity",
+   "offset": 80,
+   "decl": "struct _KAFFINITY_EX Affinity",
+   "base": "struct _KAFFINITY_EX",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "AffinityPadding": {
+   "name": "AffinityPadding",
+   "offset": 248,
+   "decl": "ULONGLONG AffinityPadding[12]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  "ReadyListHead": {
+   "name": "ReadyListHead",
+   "offset": 344,
+   "decl": "struct _LIST_ENTRY ReadyListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SwapListEntry": {
+   "name": "SwapListEntry",
+   "offset": 360,
+   "decl": "struct _SINGLE_LIST_ENTRY SwapListEntry",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ActiveProcessors": {
+   "name": "ActiveProcessors",
+   "offset": 368,
+   "decl": "volatile struct _KAFFINITY_EX ActiveProcessors",
+   "base": "volatile struct _KAFFINITY_EX",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ActiveProcessorsPadding": {
+   "name": "ActiveProcessorsPadding",
+   "offset": 536,
+   "decl": "ULONGLONG ActiveProcessorsPadding[12]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  "ProcessFlags": {
+   "name": "ProcessFlags",
+   "offset": 632,
+   "decl": "volatile LONG ProcessFlags",
+   "base": "volatile LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ActiveGroupsMask": {
+   "name": "ActiveGroupsMask",
+   "offset": 636,
+   "decl": "ULONG ActiveGroupsMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "BasePriority": {
+   "name": "BasePriority",
+   "offset": 640,
+   "decl": "CHAR BasePriority",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "QuantumReset": {
+   "name": "QuantumReset",
+   "offset": 641,
+   "decl": "CHAR QuantumReset",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Visited": {
+   "name": "Visited",
+   "offset": 642,
+   "decl": "CHAR Visited",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Flags": {
+   "name": "Flags",
+   "offset": 643,
+   "decl": "union _KEXECUTE_OPTIONS Flags",
+   "base": "union _KEXECUTE_OPTIONS",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ThreadSeed": {
+   "name": "ThreadSeed",
+   "offset": 644,
+   "decl": "USHORT ThreadSeed[20]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 20
+  },
+  "ThreadSeedPadding": {
+   "name": "ThreadSeedPadding",
+   "offset": 684,
+   "decl": "USHORT ThreadSeedPadding[12]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  "IdealProcessor": {
+   "name": "IdealProcessor",
+   "offset": 708,
+   "decl": "USHORT IdealProcessor[20]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 20
+  },
+  "IdealProcessorPadding": {
+   "name": "IdealProcessorPadding",
+   "offset": 748,
+   "decl": "USHORT IdealProcessorPadding[12]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  "IdealNode": {
+   "name": "IdealNode",
+   "offset": 772,
+   "decl": "USHORT IdealNode[20]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 20
+  },
+  "IdealNodePadding": {
+   "name": "IdealNodePadding",
+   "offset": 812,
+   "decl": "USHORT IdealNodePadding[12]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  "IdealGlobalNode": {
+   "name": "IdealGlobalNode",
+   "offset": 836,
+   "decl": "USHORT IdealGlobalNode",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Spare1": {
+   "name": "Spare1",
+   "offset": 838,
+   "decl": "USHORT Spare1",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "StackCount": {
+   "name": "StackCount",
+   "offset": 840,
+   "decl": "unionvolatile _KSTACK_COUNT StackCount",
+   "base": "unionvolatile _KSTACK_COUNT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ProcessListEntry": {
+   "name": "ProcessListEntry",
+   "offset": 848,
+   "decl": "struct _LIST_ENTRY ProcessListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CycleTime": {
+   "name": "CycleTime",
+   "offset": 864,
+   "decl": "ULONGLONG CycleTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ContextSwitches": {
+   "name": "ContextSwitches",
+   "offset": 872,
+   "decl": "ULONGLONG ContextSwitches",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SchedulingGroup": {
+   "name": "SchedulingGroup",
+   "offset": 880,
+   "decl": "struct _KSCHEDULING_GROUP* SchedulingGroup",
+   "base": "struct _KSCHEDULING_GROUP*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "FreezeCount": {
+   "name": "FreezeCount",
+   "offset": 888,
+   "decl": "ULONG FreezeCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "KernelTime": {
+   "name": "KernelTime",
+   "offset": 892,
+   "decl": "ULONG KernelTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "UserTime": {
+   "name": "UserTime",
+   "offset": 896,
+   "decl": "ULONG UserTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ReadyTime": {
+   "name": "ReadyTime",
+   "offset": 900,
+   "decl": "ULONG ReadyTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "UserDirectoryTableBase": {
+   "name": "UserDirectoryTableBase",
+   "offset": 904,
+   "decl": "ULONGLONG UserDirectoryTableBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "AddressPolicy": {
+   "name": "AddressPolicy",
+   "offset": 912,
+   "decl": "UCHAR AddressPolicy",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Spare2": {
+   "name": "Spare2",
+   "offset": 913,
+   "decl": "UCHAR Spare2[71]",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": 71
+  },
+  "InstrumentationCallback": {
+   "name": "InstrumentationCallback",
+   "offset": 984,
+   "decl": "VOID* InstrumentationCallback",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SecureHandle": {
+   "name": "SecureHandle",
+   "offset": 992,
+   "decl": "ULONGLONG SecureHandle",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SecureState": {
+   "name": "SecureState",
+   "offset": 992,
+   "decl": "} SecureState",
+   "base": "}",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "KernelWaitTime": {
+   "name": "KernelWaitTime",
+   "offset": 1000,
+   "decl": "ULONGLONG KernelWaitTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "UserWaitTime": {
+   "name": "UserWaitTime",
+   "offset": 1008,
+   "decl": "ULONGLONG UserWaitTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "EndPadding": {
+   "name": "EndPadding",
+   "offset": 1016,
+   "decl": "ULONGLONG EndPadding[8]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 8
+  }
+ },
+ "fields": [
+  {
+   "name": "Header",
+   "offset": 0,
+   "decl": "struct _DISPATCHER_HEADER Header",
+   "base": "struct _DISPATCHER_HEADER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProfileListHead",
+   "offset": 24,
+   "decl": "struct _LIST_ENTRY ProfileListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DirectoryTableBase",
+   "offset": 40,
+   "decl": "ULONGLONG DirectoryTableBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ThreadListHead",
+   "offset": 48,
+   "decl": "struct _LIST_ENTRY ThreadListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProcessLock",
+   "offset": 64,
+   "decl": "ULONG ProcessLock",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProcessTimerDelay",
+   "offset": 68,
+   "decl": "ULONG ProcessTimerDelay",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DeepFreezeStartTime",
+   "offset": 72,
+   "decl": "ULONGLONG DeepFreezeStartTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Affinity",
+   "offset": 80,
+   "decl": "struct _KAFFINITY_EX Affinity",
+   "base": "struct _KAFFINITY_EX",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AffinityPadding",
+   "offset": 248,
+   "decl": "ULONGLONG AffinityPadding[12]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  {
+   "name": "ReadyListHead",
+   "offset": 344,
+   "decl": "struct _LIST_ENTRY ReadyListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SwapListEntry",
+   "offset": 360,
+   "decl": "struct _SINGLE_LIST_ENTRY SwapListEntry",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ActiveProcessors",
+   "offset": 368,
+   "decl": "volatile struct _KAFFINITY_EX ActiveProcessors",
+   "base": "volatile struct _KAFFINITY_EX",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ActiveProcessorsPadding",
+   "offset": 536,
+   "decl": "ULONGLONG ActiveProcessorsPadding[12]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG AutoAlignment:1",
+   "base": "ULONG AutoAlignment:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG DisableBoost:1",
+   "base": "ULONG DisableBoost:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG DisableQuantum:1",
+   "base": "ULONG DisableQuantum:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG DeepFreeze:1",
+   "base": "ULONG DeepFreeze:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG TimerVirtualization:1",
+   "base": "ULONG TimerVirtualization:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG CheckStackExtents:1",
+   "base": "ULONG CheckStackExtents:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG CacheIsolationEnabled:1",
+   "base": "ULONG CacheIsolationEnabled:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG PpmPolicy:3",
+   "base": "ULONG PpmPolicy:3",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG VaSpaceDeleted:1",
+   "base": "ULONG VaSpaceDeleted:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 632,
+   "decl": "ULONG ReservedFlags:21",
+   "base": "ULONG ReservedFlags:21",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "ProcessFlags",
+   "offset": 632,
+   "decl": "volatile LONG ProcessFlags",
+   "base": "volatile LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ActiveGroupsMask",
+   "offset": 636,
+   "decl": "ULONG ActiveGroupsMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BasePriority",
+   "offset": 640,
+   "decl": "CHAR BasePriority",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "QuantumReset",
+   "offset": 641,
+   "decl": "CHAR QuantumReset",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Visited",
+   "offset": 642,
+   "decl": "CHAR Visited",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Flags",
+   "offset": 643,
+   "decl": "union _KEXECUTE_OPTIONS Flags",
+   "base": "union _KEXECUTE_OPTIONS",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ThreadSeed",
+   "offset": 644,
+   "decl": "USHORT ThreadSeed[20]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 20
+  },
+  {
+   "name": "ThreadSeedPadding",
+   "offset": 684,
+   "decl": "USHORT ThreadSeedPadding[12]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  {
+   "name": "IdealProcessor",
+   "offset": 708,
+   "decl": "USHORT IdealProcessor[20]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 20
+  },
+  {
+   "name": "IdealProcessorPadding",
+   "offset": 748,
+   "decl": "USHORT IdealProcessorPadding[12]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  {
+   "name": "IdealNode",
+   "offset": 772,
+   "decl": "USHORT IdealNode[20]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 20
+  },
+  {
+   "name": "IdealNodePadding",
+   "offset": 812,
+   "decl": "USHORT IdealNodePadding[12]",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": 12
+  },
+  {
+   "name": "IdealGlobalNode",
+   "offset": 836,
+   "decl": "USHORT IdealGlobalNode",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Spare1",
+   "offset": 838,
+   "decl": "USHORT Spare1",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "StackCount",
+   "offset": 840,
+   "decl": "unionvolatile _KSTACK_COUNT StackCount",
+   "base": "unionvolatile _KSTACK_COUNT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProcessListEntry",
+   "offset": 848,
+   "decl": "struct _LIST_ENTRY ProcessListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CycleTime",
+   "offset": 864,
+   "decl": "ULONGLONG CycleTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ContextSwitches",
+   "offset": 872,
+   "decl": "ULONGLONG ContextSwitches",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SchedulingGroup",
+   "offset": 880,
+   "decl": "struct _KSCHEDULING_GROUP* SchedulingGroup",
+   "base": "struct _KSCHEDULING_GROUP*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "FreezeCount",
+   "offset": 888,
+   "decl": "ULONG FreezeCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "KernelTime",
+   "offset": 892,
+   "decl": "ULONG KernelTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "UserTime",
+   "offset": 896,
+   "decl": "ULONG UserTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ReadyTime",
+   "offset": 900,
+   "decl": "ULONG ReadyTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "UserDirectoryTableBase",
+   "offset": 904,
+   "decl": "ULONGLONG UserDirectoryTableBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AddressPolicy",
+   "offset": 912,
+   "decl": "UCHAR AddressPolicy",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Spare2",
+   "offset": 913,
+   "decl": "UCHAR Spare2[71]",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": 71
+  },
+  {
+   "name": "InstrumentationCallback",
+   "offset": 984,
+   "decl": "VOID* InstrumentationCallback",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SecureHandle",
+   "offset": 992,
+   "decl": "ULONGLONG SecureHandle",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 992,
+   "decl": "ULONGLONG SecureProcess:1",
+   "base": "ULONGLONG SecureProcess:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 992,
+   "decl": "ULONGLONG Unused:1",
+   "base": "ULONGLONG Unused:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "Flags",
+   "offset": 992,
+   "decl": "} Flags",
+   "base": "}",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SecureState",
+   "offset": 992,
+   "decl": "} SecureState",
+   "base": "}",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "KernelWaitTime",
+   "offset": 1000,
+   "decl": "ULONGLONG KernelWaitTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "UserWaitTime",
+   "offset": 1008,
+   "decl": "ULONGLONG UserWaitTime",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "EndPadding",
+   "offset": 1016,
+   "decl": "ULONGLONG EndPadding[8]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 8
+  }
+ ]
+}

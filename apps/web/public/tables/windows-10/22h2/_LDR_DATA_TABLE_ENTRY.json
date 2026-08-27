@@ -1,0 +1,819 @@
+{
+ "name": "LDR_DATA_TABLE_ENTRY",
+ "totalSize": 288,
+ "fieldCount": 59,
+ "fieldsByName": {
+  "InLoadOrderLinks": {
+   "name": "InLoadOrderLinks",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY InLoadOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "InMemoryOrderLinks": {
+   "name": "InMemoryOrderLinks",
+   "offset": 16,
+   "decl": "struct _LIST_ENTRY InMemoryOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "InInitializationOrderLinks": {
+   "name": "InInitializationOrderLinks",
+   "offset": 32,
+   "decl": "struct _LIST_ENTRY InInitializationOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DllBase": {
+   "name": "DllBase",
+   "offset": 48,
+   "decl": "VOID* DllBase",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "EntryPoint": {
+   "name": "EntryPoint",
+   "offset": 56,
+   "decl": "VOID* EntryPoint",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SizeOfImage": {
+   "name": "SizeOfImage",
+   "offset": 64,
+   "decl": "ULONG SizeOfImage",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "FullDllName": {
+   "name": "FullDllName",
+   "offset": 72,
+   "decl": "struct _UNICODE_STRING FullDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "BaseDllName": {
+   "name": "BaseDllName",
+   "offset": 88,
+   "decl": "struct _UNICODE_STRING BaseDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "FlagGroup": {
+   "name": "FlagGroup",
+   "offset": 104,
+   "decl": "UCHAR FlagGroup[4]",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": 4
+  },
+  "Flags": {
+   "name": "Flags",
+   "offset": 104,
+   "decl": "ULONG Flags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ObsoleteLoadCount": {
+   "name": "ObsoleteLoadCount",
+   "offset": 108,
+   "decl": "USHORT ObsoleteLoadCount",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TlsIndex": {
+   "name": "TlsIndex",
+   "offset": 110,
+   "decl": "USHORT TlsIndex",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HashLinks": {
+   "name": "HashLinks",
+   "offset": 112,
+   "decl": "struct _LIST_ENTRY HashLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TimeDateStamp": {
+   "name": "TimeDateStamp",
+   "offset": 128,
+   "decl": "ULONG TimeDateStamp",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "EntryPointActivationContext": {
+   "name": "EntryPointActivationContext",
+   "offset": 136,
+   "decl": "struct _ACTIVATION_CONTEXT* EntryPointActivationContext",
+   "base": "struct _ACTIVATION_CONTEXT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Lock": {
+   "name": "Lock",
+   "offset": 144,
+   "decl": "VOID* Lock",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "DdagNode": {
+   "name": "DdagNode",
+   "offset": 152,
+   "decl": "struct _LDR_DDAG_NODE* DdagNode",
+   "base": "struct _LDR_DDAG_NODE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "NodeModuleLink": {
+   "name": "NodeModuleLink",
+   "offset": 160,
+   "decl": "struct _LIST_ENTRY NodeModuleLink",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LoadContext": {
+   "name": "LoadContext",
+   "offset": 176,
+   "decl": "struct _LDRP_LOAD_CONTEXT* LoadContext",
+   "base": "struct _LDRP_LOAD_CONTEXT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ParentDllBase": {
+   "name": "ParentDllBase",
+   "offset": 184,
+   "decl": "VOID* ParentDllBase",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SwitchBackContext": {
+   "name": "SwitchBackContext",
+   "offset": 192,
+   "decl": "VOID* SwitchBackContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "BaseAddressIndexNode": {
+   "name": "BaseAddressIndexNode",
+   "offset": 200,
+   "decl": "struct _RTL_BALANCED_NODE BaseAddressIndexNode",
+   "base": "struct _RTL_BALANCED_NODE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "MappingInfoIndexNode": {
+   "name": "MappingInfoIndexNode",
+   "offset": 224,
+   "decl": "struct _RTL_BALANCED_NODE MappingInfoIndexNode",
+   "base": "struct _RTL_BALANCED_NODE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "OriginalBase": {
+   "name": "OriginalBase",
+   "offset": 248,
+   "decl": "ULONGLONG OriginalBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LoadTime": {
+   "name": "LoadTime",
+   "offset": 256,
+   "decl": "union _LARGE_INTEGER LoadTime",
+   "base": "union _LARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "BaseNameHashValue": {
+   "name": "BaseNameHashValue",
+   "offset": 264,
+   "decl": "ULONG BaseNameHashValue",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LoadReason": {
+   "name": "LoadReason",
+   "offset": 268,
+   "decl": "enum _LDR_DLL_LOAD_REASON LoadReason",
+   "base": "enum _LDR_DLL_LOAD_REASON",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ImplicitPathOptions": {
+   "name": "ImplicitPathOptions",
+   "offset": 272,
+   "decl": "ULONG ImplicitPathOptions",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ReferenceCount": {
+   "name": "ReferenceCount",
+   "offset": 276,
+   "decl": "ULONG ReferenceCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DependentLoadFlags": {
+   "name": "DependentLoadFlags",
+   "offset": 280,
+   "decl": "ULONG DependentLoadFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SigningLevel": {
+   "name": "SigningLevel",
+   "offset": 284,
+   "decl": "UCHAR SigningLevel",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "InLoadOrderLinks",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY InLoadOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "InMemoryOrderLinks",
+   "offset": 16,
+   "decl": "struct _LIST_ENTRY InMemoryOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "InInitializationOrderLinks",
+   "offset": 32,
+   "decl": "struct _LIST_ENTRY InInitializationOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DllBase",
+   "offset": 48,
+   "decl": "VOID* DllBase",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "EntryPoint",
+   "offset": 56,
+   "decl": "VOID* EntryPoint",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SizeOfImage",
+   "offset": 64,
+   "decl": "ULONG SizeOfImage",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "FullDllName",
+   "offset": 72,
+   "decl": "struct _UNICODE_STRING FullDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BaseDllName",
+   "offset": 88,
+   "decl": "struct _UNICODE_STRING BaseDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "FlagGroup",
+   "offset": 104,
+   "decl": "UCHAR FlagGroup[4]",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": 4
+  },
+  {
+   "name": "Flags",
+   "offset": 104,
+   "decl": "ULONG Flags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG PackagedBinary:1",
+   "base": "ULONG PackagedBinary:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG MarkedForRemoval:1",
+   "base": "ULONG MarkedForRemoval:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ImageDll:1",
+   "base": "ULONG ImageDll:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG LoadNotificationsSent:1",
+   "base": "ULONG LoadNotificationsSent:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG TelemetryEntryProcessed:1",
+   "base": "ULONG TelemetryEntryProcessed:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ProcessStaticImport:1",
+   "base": "ULONG ProcessStaticImport:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG InLegacyLists:1",
+   "base": "ULONG InLegacyLists:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG InIndexes:1",
+   "base": "ULONG InIndexes:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ShimDll:1",
+   "base": "ULONG ShimDll:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG InExceptionTable:1",
+   "base": "ULONG InExceptionTable:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ReservedFlags1:2",
+   "base": "ULONG ReservedFlags1:2",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG LoadInProgress:1",
+   "base": "ULONG LoadInProgress:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG LoadConfigProcessed:1",
+   "base": "ULONG LoadConfigProcessed:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG EntryProcessed:1",
+   "base": "ULONG EntryProcessed:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ProtectDelayLoad:1",
+   "base": "ULONG ProtectDelayLoad:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ReservedFlags3:2",
+   "base": "ULONG ReservedFlags3:2",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG DontCallForThreads:1",
+   "base": "ULONG DontCallForThreads:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ProcessAttachCalled:1",
+   "base": "ULONG ProcessAttachCalled:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ProcessAttachFailed:1",
+   "base": "ULONG ProcessAttachFailed:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG CorDeferredValidate:1",
+   "base": "ULONG CorDeferredValidate:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG CorImage:1",
+   "base": "ULONG CorImage:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG DontRelocate:1",
+   "base": "ULONG DontRelocate:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG CorILOnly:1",
+   "base": "ULONG CorILOnly:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ChpeImage:1",
+   "base": "ULONG ChpeImage:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ReservedFlags5:2",
+   "base": "ULONG ReservedFlags5:2",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG Redirected:1",
+   "base": "ULONG Redirected:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG ReservedFlags6:2",
+   "base": "ULONG ReservedFlags6:2",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "ULONG CompatDatabaseProcessed:1",
+   "base": "ULONG CompatDatabaseProcessed:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "ObsoleteLoadCount",
+   "offset": 108,
+   "decl": "USHORT ObsoleteLoadCount",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TlsIndex",
+   "offset": 110,
+   "decl": "USHORT TlsIndex",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HashLinks",
+   "offset": 112,
+   "decl": "struct _LIST_ENTRY HashLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TimeDateStamp",
+   "offset": 128,
+   "decl": "ULONG TimeDateStamp",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "EntryPointActivationContext",
+   "offset": 136,
+   "decl": "struct _ACTIVATION_CONTEXT* EntryPointActivationContext",
+   "base": "struct _ACTIVATION_CONTEXT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Lock",
+   "offset": 144,
+   "decl": "VOID* Lock",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DdagNode",
+   "offset": 152,
+   "decl": "struct _LDR_DDAG_NODE* DdagNode",
+   "base": "struct _LDR_DDAG_NODE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "NodeModuleLink",
+   "offset": 160,
+   "decl": "struct _LIST_ENTRY NodeModuleLink",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LoadContext",
+   "offset": 176,
+   "decl": "struct _LDRP_LOAD_CONTEXT* LoadContext",
+   "base": "struct _LDRP_LOAD_CONTEXT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ParentDllBase",
+   "offset": 184,
+   "decl": "VOID* ParentDllBase",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SwitchBackContext",
+   "offset": 192,
+   "decl": "VOID* SwitchBackContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BaseAddressIndexNode",
+   "offset": 200,
+   "decl": "struct _RTL_BALANCED_NODE BaseAddressIndexNode",
+   "base": "struct _RTL_BALANCED_NODE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "MappingInfoIndexNode",
+   "offset": 224,
+   "decl": "struct _RTL_BALANCED_NODE MappingInfoIndexNode",
+   "base": "struct _RTL_BALANCED_NODE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "OriginalBase",
+   "offset": 248,
+   "decl": "ULONGLONG OriginalBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LoadTime",
+   "offset": 256,
+   "decl": "union _LARGE_INTEGER LoadTime",
+   "base": "union _LARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BaseNameHashValue",
+   "offset": 264,
+   "decl": "ULONG BaseNameHashValue",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LoadReason",
+   "offset": 268,
+   "decl": "enum _LDR_DLL_LOAD_REASON LoadReason",
+   "base": "enum _LDR_DLL_LOAD_REASON",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ImplicitPathOptions",
+   "offset": 272,
+   "decl": "ULONG ImplicitPathOptions",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ReferenceCount",
+   "offset": 276,
+   "decl": "ULONG ReferenceCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DependentLoadFlags",
+   "offset": 280,
+   "decl": "ULONG DependentLoadFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SigningLevel",
+   "offset": 284,
+   "decl": "UCHAR SigningLevel",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

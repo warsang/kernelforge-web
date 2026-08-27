@@ -1,0 +1,477 @@
+{
+ "name": "KPCR",
+ "totalSize": 376,
+ "fieldCount": 26,
+ "fieldsByName": {
+  "NtTib": {
+   "name": "NtTib",
+   "offset": 0,
+   "decl": "struct _NT_TIB NtTib",
+   "base": "struct _NT_TIB",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "GdtBase": {
+   "name": "GdtBase",
+   "offset": 0,
+   "decl": "union _KGDTENTRY64* GdtBase",
+   "base": "union _KGDTENTRY64*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "TssBase": {
+   "name": "TssBase",
+   "offset": 8,
+   "decl": "struct _KTSS64* TssBase",
+   "base": "struct _KTSS64*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "UserRsp": {
+   "name": "UserRsp",
+   "offset": 16,
+   "decl": "ULONGLONG UserRsp",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Self": {
+   "name": "Self",
+   "offset": 24,
+   "decl": "struct _KPCR* Self",
+   "base": "struct _KPCR*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "CurrentPrcb": {
+   "name": "CurrentPrcb",
+   "offset": 32,
+   "decl": "struct _KPRCB* CurrentPrcb",
+   "base": "struct _KPRCB*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "LockArray": {
+   "name": "LockArray",
+   "offset": 40,
+   "decl": "struct _KSPIN_LOCK_QUEUE* LockArray",
+   "base": "struct _KSPIN_LOCK_QUEUE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Used_Self": {
+   "name": "Used_Self",
+   "offset": 48,
+   "decl": "VOID* Used_Self",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "IdtBase": {
+   "name": "IdtBase",
+   "offset": 56,
+   "decl": "union _KIDTENTRY64* IdtBase",
+   "base": "union _KIDTENTRY64*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Unused": {
+   "name": "Unused",
+   "offset": 64,
+   "decl": "ULONGLONG Unused[2]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 2
+  },
+  "Irql": {
+   "name": "Irql",
+   "offset": 80,
+   "decl": "UCHAR Irql",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SecondLevelCacheAssociativity": {
+   "name": "SecondLevelCacheAssociativity",
+   "offset": 81,
+   "decl": "UCHAR SecondLevelCacheAssociativity",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ObsoleteNumber": {
+   "name": "ObsoleteNumber",
+   "offset": 82,
+   "decl": "UCHAR ObsoleteNumber",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Fill0": {
+   "name": "Fill0",
+   "offset": 83,
+   "decl": "UCHAR Fill0",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Unused0": {
+   "name": "Unused0",
+   "offset": 84,
+   "decl": "ULONG Unused0[3]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 3
+  },
+  "MajorVersion": {
+   "name": "MajorVersion",
+   "offset": 96,
+   "decl": "USHORT MajorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "MinorVersion": {
+   "name": "MinorVersion",
+   "offset": 98,
+   "decl": "USHORT MinorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "StallScaleFactor": {
+   "name": "StallScaleFactor",
+   "offset": 100,
+   "decl": "ULONG StallScaleFactor",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Unused1": {
+   "name": "Unused1",
+   "offset": 104,
+   "decl": "VOID* Unused1[3]",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": 3
+  },
+  "KernelReserved": {
+   "name": "KernelReserved",
+   "offset": 128,
+   "decl": "ULONG KernelReserved[15]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 15
+  },
+  "SecondLevelCacheSize": {
+   "name": "SecondLevelCacheSize",
+   "offset": 188,
+   "decl": "ULONG SecondLevelCacheSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HalReserved": {
+   "name": "HalReserved",
+   "offset": 192,
+   "decl": "ULONG HalReserved[16]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 16
+  },
+  "Unused2": {
+   "name": "Unused2",
+   "offset": 256,
+   "decl": "ULONG Unused2",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "KdVersionBlock": {
+   "name": "KdVersionBlock",
+   "offset": 264,
+   "decl": "VOID* KdVersionBlock",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Unused3": {
+   "name": "Unused3",
+   "offset": 272,
+   "decl": "VOID* Unused3",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "PcrAlign1": {
+   "name": "PcrAlign1",
+   "offset": 280,
+   "decl": "ULONG PcrAlign1[24]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 24
+  }
+ },
+ "fields": [
+  {
+   "name": "NtTib",
+   "offset": 0,
+   "decl": "struct _NT_TIB NtTib",
+   "base": "struct _NT_TIB",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "GdtBase",
+   "offset": 0,
+   "decl": "union _KGDTENTRY64* GdtBase",
+   "base": "union _KGDTENTRY64*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TssBase",
+   "offset": 8,
+   "decl": "struct _KTSS64* TssBase",
+   "base": "struct _KTSS64*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "UserRsp",
+   "offset": 16,
+   "decl": "ULONGLONG UserRsp",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Self",
+   "offset": 24,
+   "decl": "struct _KPCR* Self",
+   "base": "struct _KPCR*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CurrentPrcb",
+   "offset": 32,
+   "decl": "struct _KPRCB* CurrentPrcb",
+   "base": "struct _KPRCB*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LockArray",
+   "offset": 40,
+   "decl": "struct _KSPIN_LOCK_QUEUE* LockArray",
+   "base": "struct _KSPIN_LOCK_QUEUE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Used_Self",
+   "offset": 48,
+   "decl": "VOID* Used_Self",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IdtBase",
+   "offset": 56,
+   "decl": "union _KIDTENTRY64* IdtBase",
+   "base": "union _KIDTENTRY64*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Unused",
+   "offset": 64,
+   "decl": "ULONGLONG Unused[2]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 2
+  },
+  {
+   "name": "Irql",
+   "offset": 80,
+   "decl": "UCHAR Irql",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SecondLevelCacheAssociativity",
+   "offset": 81,
+   "decl": "UCHAR SecondLevelCacheAssociativity",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ObsoleteNumber",
+   "offset": 82,
+   "decl": "UCHAR ObsoleteNumber",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Fill0",
+   "offset": 83,
+   "decl": "UCHAR Fill0",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Unused0",
+   "offset": 84,
+   "decl": "ULONG Unused0[3]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 3
+  },
+  {
+   "name": "MajorVersion",
+   "offset": 96,
+   "decl": "USHORT MajorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "MinorVersion",
+   "offset": 98,
+   "decl": "USHORT MinorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "StallScaleFactor",
+   "offset": 100,
+   "decl": "ULONG StallScaleFactor",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Unused1",
+   "offset": 104,
+   "decl": "VOID* Unused1[3]",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": 3
+  },
+  {
+   "name": "KernelReserved",
+   "offset": 128,
+   "decl": "ULONG KernelReserved[15]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 15
+  },
+  {
+   "name": "SecondLevelCacheSize",
+   "offset": 188,
+   "decl": "ULONG SecondLevelCacheSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HalReserved",
+   "offset": 192,
+   "decl": "ULONG HalReserved[16]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 16
+  },
+  {
+   "name": "Unused2",
+   "offset": 256,
+   "decl": "ULONG Unused2",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "KdVersionBlock",
+   "offset": 264,
+   "decl": "VOID* KdVersionBlock",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Unused3",
+   "offset": 272,
+   "decl": "VOID* Unused3",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PcrAlign1",
+   "offset": 280,
+   "decl": "ULONG PcrAlign1[24]",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 24
+  }
+ ]
+}

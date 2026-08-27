@@ -1,0 +1,135 @@
+{
+ "name": "POOL_HEADER",
+ "totalSize": 16,
+ "fieldCount": 9,
+ "fieldsByName": {
+  "Ulong1": {
+   "name": "Ulong1",
+   "offset": 0,
+   "decl": "ULONG Ulong1",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PoolTag": {
+   "name": "PoolTag",
+   "offset": 4,
+   "decl": "ULONG PoolTag",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ProcessBilled": {
+   "name": "ProcessBilled",
+   "offset": 8,
+   "decl": "struct _EPROCESS* ProcessBilled",
+   "base": "struct _EPROCESS*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "AllocatorBackTraceIndex": {
+   "name": "AllocatorBackTraceIndex",
+   "offset": 8,
+   "decl": "USHORT AllocatorBackTraceIndex",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PoolTagHash": {
+   "name": "PoolTagHash",
+   "offset": 10,
+   "decl": "USHORT PoolTagHash",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "USHORT PreviousSize:8",
+   "base": "USHORT PreviousSize:8",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "USHORT PoolIndex:8",
+   "base": "USHORT PoolIndex:8",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "USHORT BlockSize:8",
+   "base": "USHORT BlockSize:8",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "USHORT PoolType:8",
+   "base": "USHORT PoolType:8",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "Ulong1",
+   "offset": 0,
+   "decl": "ULONG Ulong1",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PoolTag",
+   "offset": 4,
+   "decl": "ULONG PoolTag",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProcessBilled",
+   "offset": 8,
+   "decl": "struct _EPROCESS* ProcessBilled",
+   "base": "struct _EPROCESS*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AllocatorBackTraceIndex",
+   "offset": 8,
+   "decl": "USHORT AllocatorBackTraceIndex",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PoolTagHash",
+   "offset": 10,
+   "decl": "USHORT PoolTagHash",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

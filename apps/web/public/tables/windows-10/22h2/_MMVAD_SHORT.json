@@ -1,0 +1,125 @@
+{
+ "name": "MMVAD_SHORT",
+ "totalSize": 64,
+ "fieldCount": 13,
+ "source": "synthetic-teaching: hand-authored from public VergiliusProject windows-10/22h2 x64 dump (CC0); kept out of the scraper flow so the scraped set stays pristine",
+ "fieldsByName": {
+  "NextVad": {
+   "name": "NextVad",
+   "offset": 0,
+   "decl": "struct _MMVAD_SHORT* NextVad",
+   "base": "struct _MMVAD_SHORT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ExtraCreateInfo": {
+   "name": "ExtraCreateInfo",
+   "offset": 8,
+   "decl": "VOID* ExtraCreateInfo",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "StartingVpn": {
+   "name": "StartingVpn",
+   "offset": 24,
+   "decl": "ULONG StartingVpn",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "EndingVpn": {
+   "name": "EndingVpn",
+   "offset": 28,
+   "decl": "ULONG EndingVpn",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "StartingVpnHigh": {
+   "name": "StartingVpnHigh",
+   "offset": 32,
+   "decl": "UCHAR StartingVpnHigh",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "EndingVpnHigh": {
+   "name": "EndingVpnHigh",
+   "offset": 33,
+   "decl": "UCHAR EndingVpnHigh",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CommitChargeHigh": {
+   "name": "CommitChargeHigh",
+   "offset": 34,
+   "decl": "UCHAR CommitChargeHigh",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SpareNT64VadUChar": {
+   "name": "SpareNT64VadUChar",
+   "offset": 35,
+   "decl": "UCHAR SpareNT64VadUChar",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ReferenceCount": {
+   "name": "ReferenceCount",
+   "offset": 36,
+   "decl": "LONG ReferenceCount",
+   "base": "LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PushLock": {
+   "name": "PushLock",
+   "offset": 40,
+   "decl": "struct _EX_PUSH_LOCK PushLock",
+   "base": "struct _EX_PUSH_LOCK",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "u": {
+   "name": "u",
+   "offset": 48,
+   "decl": "union u (MMVAD_FLAGS)",
+   "base": "union u",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "u1": {
+   "name": "u1",
+   "offset": 52,
+   "decl": "union u1 (MMVAD_FLAGS1)",
+   "base": "union u1",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "EventList": {
+   "name": "EventList",
+   "offset": 56,
+   "decl": "struct _MI_VAD_EVENT_BLOCK* EventList",
+   "base": "struct _MI_VAD_EVENT_BLOCK*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ }
+}

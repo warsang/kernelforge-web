@@ -1,0 +1,927 @@
+{
+ "name": "KPRCB",
+ "totalSize": 1792,
+ "fieldCount": 52,
+ "fieldsByName": {
+  "MxCsr": {
+   "name": "MxCsr",
+   "offset": 0,
+   "decl": "ULONG MxCsr",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LegacyNumber": {
+   "name": "LegacyNumber",
+   "offset": 4,
+   "decl": "UCHAR LegacyNumber",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ReservedMustBeZero": {
+   "name": "ReservedMustBeZero",
+   "offset": 5,
+   "decl": "UCHAR ReservedMustBeZero",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "InterruptRequest": {
+   "name": "InterruptRequest",
+   "offset": 6,
+   "decl": "UCHAR InterruptRequest",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "IdleHalt": {
+   "name": "IdleHalt",
+   "offset": 7,
+   "decl": "UCHAR IdleHalt",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CurrentThread": {
+   "name": "CurrentThread",
+   "offset": 8,
+   "decl": "struct _KTHREAD* CurrentThread",
+   "base": "struct _KTHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "NextThread": {
+   "name": "NextThread",
+   "offset": 16,
+   "decl": "struct _KTHREAD* NextThread",
+   "base": "struct _KTHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "IdleThread": {
+   "name": "IdleThread",
+   "offset": 24,
+   "decl": "struct _KTHREAD* IdleThread",
+   "base": "struct _KTHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "NestingLevel": {
+   "name": "NestingLevel",
+   "offset": 32,
+   "decl": "UCHAR NestingLevel",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ClockOwner": {
+   "name": "ClockOwner",
+   "offset": 33,
+   "decl": "UCHAR ClockOwner",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PendingTickFlags": {
+   "name": "PendingTickFlags",
+   "offset": 34,
+   "decl": "UCHAR PendingTickFlags",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "IdleState": {
+   "name": "IdleState",
+   "offset": 35,
+   "decl": "UCHAR IdleState",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Number": {
+   "name": "Number",
+   "offset": 36,
+   "decl": "ULONG Number",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "RspBase": {
+   "name": "RspBase",
+   "offset": 40,
+   "decl": "ULONGLONG RspBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PrcbLock": {
+   "name": "PrcbLock",
+   "offset": 48,
+   "decl": "ULONGLONG PrcbLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PriorityState": {
+   "name": "PriorityState",
+   "offset": 56,
+   "decl": "CHAR* PriorityState",
+   "base": "CHAR*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "CpuType": {
+   "name": "CpuType",
+   "offset": 64,
+   "decl": "CHAR CpuType",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CpuID": {
+   "name": "CpuID",
+   "offset": 65,
+   "decl": "CHAR CpuID",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CpuStep": {
+   "name": "CpuStep",
+   "offset": 66,
+   "decl": "USHORT CpuStep",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CpuStepping": {
+   "name": "CpuStepping",
+   "offset": 66,
+   "decl": "UCHAR CpuStepping",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CpuModel": {
+   "name": "CpuModel",
+   "offset": 67,
+   "decl": "UCHAR CpuModel",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "MHz": {
+   "name": "MHz",
+   "offset": 68,
+   "decl": "ULONG MHz",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HalReserved": {
+   "name": "HalReserved",
+   "offset": 72,
+   "decl": "ULONGLONG HalReserved[8]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 8
+  },
+  "MinorVersion": {
+   "name": "MinorVersion",
+   "offset": 136,
+   "decl": "USHORT MinorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "MajorVersion": {
+   "name": "MajorVersion",
+   "offset": 138,
+   "decl": "USHORT MajorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "BuildType": {
+   "name": "BuildType",
+   "offset": 140,
+   "decl": "UCHAR BuildType",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CpuVendor": {
+   "name": "CpuVendor",
+   "offset": 141,
+   "decl": "UCHAR CpuVendor",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LegacyCoresPerPhysicalProcessor": {
+   "name": "LegacyCoresPerPhysicalProcessor",
+   "offset": 142,
+   "decl": "UCHAR LegacyCoresPerPhysicalProcessor",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LegacyLogicalProcessorsPerCore": {
+   "name": "LegacyLogicalProcessorsPerCore",
+   "offset": 143,
+   "decl": "UCHAR LegacyLogicalProcessorsPerCore",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TscFrequency": {
+   "name": "TscFrequency",
+   "offset": 144,
+   "decl": "ULONGLONG TscFrequency",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CoresPerPhysicalProcessor": {
+   "name": "CoresPerPhysicalProcessor",
+   "offset": 152,
+   "decl": "ULONG CoresPerPhysicalProcessor",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LogicalProcessorsPerCore": {
+   "name": "LogicalProcessorsPerCore",
+   "offset": 156,
+   "decl": "ULONG LogicalProcessorsPerCore",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PrcbPad04": {
+   "name": "PrcbPad04",
+   "offset": 160,
+   "decl": "ULONGLONG PrcbPad04[4]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 4
+  },
+  "ParentNode": {
+   "name": "ParentNode",
+   "offset": 192,
+   "decl": "struct _KNODE* ParentNode",
+   "base": "struct _KNODE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "GroupSetMember": {
+   "name": "GroupSetMember",
+   "offset": 200,
+   "decl": "ULONGLONG GroupSetMember",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Group": {
+   "name": "Group",
+   "offset": 208,
+   "decl": "UCHAR Group",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "GroupIndex": {
+   "name": "GroupIndex",
+   "offset": 209,
+   "decl": "UCHAR GroupIndex",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PrcbPad05": {
+   "name": "PrcbPad05",
+   "offset": 210,
+   "decl": "UCHAR PrcbPad05[2]",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": 2
+  },
+  "InitialApicId": {
+   "name": "InitialApicId",
+   "offset": 212,
+   "decl": "ULONG InitialApicId",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ScbOffset": {
+   "name": "ScbOffset",
+   "offset": 216,
+   "decl": "ULONG ScbOffset",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ApicMask": {
+   "name": "ApicMask",
+   "offset": 220,
+   "decl": "ULONG ApicMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "AcpiReserved": {
+   "name": "AcpiReserved",
+   "offset": 224,
+   "decl": "VOID* AcpiReserved",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "CFlushSize": {
+   "name": "CFlushSize",
+   "offset": 232,
+   "decl": "ULONG CFlushSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PrcbPad11": {
+   "name": "PrcbPad11",
+   "offset": 240,
+   "decl": "ULONGLONG PrcbPad11[2]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 2
+  },
+  "ProcessorState": {
+   "name": "ProcessorState",
+   "offset": 256,
+   "decl": "struct _KPROCESSOR_STATE ProcessorState",
+   "base": "struct _KPROCESSOR_STATE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ExtendedSupervisorState": {
+   "name": "ExtendedSupervisorState",
+   "offset": 1728,
+   "decl": "struct _XSAVE_AREA_HEADER* ExtendedSupervisorState",
+   "base": "struct _XSAVE_AREA_HEADER*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ProcessorSignature": {
+   "name": "ProcessorSignature",
+   "offset": 1736,
+   "decl": "ULONG ProcessorSignature",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ProcessorFlags": {
+   "name": "ProcessorFlags",
+   "offset": 1740,
+   "decl": "ULONG ProcessorFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PrcbPad12a": {
+   "name": "PrcbPad12a",
+   "offset": 1744,
+   "decl": "ULONGLONG PrcbPad12a",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PrcbPad12": {
+   "name": "PrcbPad12",
+   "offset": 1752,
+   "decl": "ULONGLONG PrcbPad12[3]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 3
+  }
+ },
+ "fields": [
+  {
+   "name": "MxCsr",
+   "offset": 0,
+   "decl": "ULONG MxCsr",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LegacyNumber",
+   "offset": 4,
+   "decl": "UCHAR LegacyNumber",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ReservedMustBeZero",
+   "offset": 5,
+   "decl": "UCHAR ReservedMustBeZero",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "InterruptRequest",
+   "offset": 6,
+   "decl": "UCHAR InterruptRequest",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IdleHalt",
+   "offset": 7,
+   "decl": "UCHAR IdleHalt",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CurrentThread",
+   "offset": 8,
+   "decl": "struct _KTHREAD* CurrentThread",
+   "base": "struct _KTHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "NextThread",
+   "offset": 16,
+   "decl": "struct _KTHREAD* NextThread",
+   "base": "struct _KTHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IdleThread",
+   "offset": 24,
+   "decl": "struct _KTHREAD* IdleThread",
+   "base": "struct _KTHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "NestingLevel",
+   "offset": 32,
+   "decl": "UCHAR NestingLevel",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ClockOwner",
+   "offset": 33,
+   "decl": "UCHAR ClockOwner",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PendingTickFlags",
+   "offset": 34,
+   "decl": "UCHAR PendingTickFlags",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 34,
+   "decl": "UCHAR PendingTick:1",
+   "base": "UCHAR PendingTick:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 34,
+   "decl": "UCHAR PendingBackupTick:1",
+   "base": "UCHAR PendingBackupTick:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "IdleState",
+   "offset": 35,
+   "decl": "UCHAR IdleState",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Number",
+   "offset": 36,
+   "decl": "ULONG Number",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "RspBase",
+   "offset": 40,
+   "decl": "ULONGLONG RspBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PrcbLock",
+   "offset": 48,
+   "decl": "ULONGLONG PrcbLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PriorityState",
+   "offset": 56,
+   "decl": "CHAR* PriorityState",
+   "base": "CHAR*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CpuType",
+   "offset": 64,
+   "decl": "CHAR CpuType",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CpuID",
+   "offset": 65,
+   "decl": "CHAR CpuID",
+   "base": "CHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CpuStep",
+   "offset": 66,
+   "decl": "USHORT CpuStep",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CpuStepping",
+   "offset": 66,
+   "decl": "UCHAR CpuStepping",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CpuModel",
+   "offset": 67,
+   "decl": "UCHAR CpuModel",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "MHz",
+   "offset": 68,
+   "decl": "ULONG MHz",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HalReserved",
+   "offset": 72,
+   "decl": "ULONGLONG HalReserved[8]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 8
+  },
+  {
+   "name": "MinorVersion",
+   "offset": 136,
+   "decl": "USHORT MinorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "MajorVersion",
+   "offset": 138,
+   "decl": "USHORT MajorVersion",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BuildType",
+   "offset": 140,
+   "decl": "UCHAR BuildType",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CpuVendor",
+   "offset": 141,
+   "decl": "UCHAR CpuVendor",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LegacyCoresPerPhysicalProcessor",
+   "offset": 142,
+   "decl": "UCHAR LegacyCoresPerPhysicalProcessor",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LegacyLogicalProcessorsPerCore",
+   "offset": 143,
+   "decl": "UCHAR LegacyLogicalProcessorsPerCore",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TscFrequency",
+   "offset": 144,
+   "decl": "ULONGLONG TscFrequency",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CoresPerPhysicalProcessor",
+   "offset": 152,
+   "decl": "ULONG CoresPerPhysicalProcessor",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LogicalProcessorsPerCore",
+   "offset": 156,
+   "decl": "ULONG LogicalProcessorsPerCore",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PrcbPad04",
+   "offset": 160,
+   "decl": "ULONGLONG PrcbPad04[4]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 4
+  },
+  {
+   "name": "ParentNode",
+   "offset": 192,
+   "decl": "struct _KNODE* ParentNode",
+   "base": "struct _KNODE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "GroupSetMember",
+   "offset": 200,
+   "decl": "ULONGLONG GroupSetMember",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Group",
+   "offset": 208,
+   "decl": "UCHAR Group",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "GroupIndex",
+   "offset": 209,
+   "decl": "UCHAR GroupIndex",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PrcbPad05",
+   "offset": 210,
+   "decl": "UCHAR PrcbPad05[2]",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": 2
+  },
+  {
+   "name": "InitialApicId",
+   "offset": 212,
+   "decl": "ULONG InitialApicId",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ScbOffset",
+   "offset": 216,
+   "decl": "ULONG ScbOffset",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ApicMask",
+   "offset": 220,
+   "decl": "ULONG ApicMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AcpiReserved",
+   "offset": 224,
+   "decl": "VOID* AcpiReserved",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CFlushSize",
+   "offset": 232,
+   "decl": "ULONG CFlushSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PrcbPad11",
+   "offset": 240,
+   "decl": "ULONGLONG PrcbPad11[2]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 2
+  },
+  {
+   "name": "ProcessorState",
+   "offset": 256,
+   "decl": "struct _KPROCESSOR_STATE ProcessorState",
+   "base": "struct _KPROCESSOR_STATE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ExtendedSupervisorState",
+   "offset": 1728,
+   "decl": "struct _XSAVE_AREA_HEADER* ExtendedSupervisorState",
+   "base": "struct _XSAVE_AREA_HEADER*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProcessorSignature",
+   "offset": 1736,
+   "decl": "ULONG ProcessorSignature",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ProcessorFlags",
+   "offset": 1740,
+   "decl": "ULONG ProcessorFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PrcbPad12a",
+   "offset": 1744,
+   "decl": "ULONGLONG PrcbPad12a",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PrcbPad12",
+   "offset": 1752,
+   "decl": "ULONGLONG PrcbPad12[3]",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": 3
+  }
+ ]
+}

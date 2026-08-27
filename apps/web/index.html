@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KernelForge — Windows Kernel Labs</title>
+  <script>
+    // Dev answer defaults: catalog hashes these at module load (answers are
+    // normalized trim+lowercase before hashing). Override per environment
+    // (real deployments inject hashed answers at content build).
+    window.process = {
+      env: {
+        KF_FLAG_M1L1F1: "kfprobe.sys",
+        KF_FLAG_M1L1F2: "312",
+        KF_FLAG_M1L2F1: "0xffffc80000001448",
+      },
+    };
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

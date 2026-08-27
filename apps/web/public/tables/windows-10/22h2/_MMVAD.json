@@ -1,0 +1,89 @@
+{
+ "name": "MMVAD",
+ "totalSize": 136,
+ "fieldCount": 10,
+ "source": "synthetic-teaching: hand-authored from public VergiliusProject windows-10/22h2 x64 dump (CC0); kept out of the scraper flow so the scraped set stays pristine",
+ "fieldsByName": {
+  "Core": {
+   "name": "Core",
+   "offset": 0,
+   "decl": "struct _MMVAD_SHORT Core",
+   "base": "struct _MMVAD_SHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "u2": {
+   "name": "u2",
+   "offset": 64,
+   "decl": "union u2 (MMVAD_FLAGS2)",
+   "base": "union u2",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Subsection": {
+   "name": "Subsection",
+   "offset": 72,
+   "decl": "struct _SUBSECTION* Subsection",
+   "base": "struct _SUBSECTION*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "FirstPrototypePte": {
+   "name": "FirstPrototypePte",
+   "offset": 80,
+   "decl": "struct _MMPTE* FirstPrototypePte",
+   "base": "struct _MMPTE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "LastContiguousPte": {
+   "name": "LastContiguousPte",
+   "offset": 88,
+   "decl": "struct _MMPTE* LastContiguousPte",
+   "base": "struct _MMPTE*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ViewLinks": {
+   "name": "ViewLinks",
+   "offset": 96,
+   "decl": "struct _LIST_ENTRY ViewLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "VadsProcess": {
+   "name": "VadsProcess",
+   "offset": 112,
+   "decl": "struct _EPROCESS* VadsProcess",
+   "base": "struct _EPROCESS*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "u4": {
+   "name": "u4",
+   "offset": 120,
+   "decl": "union u4 (MI_VAD_SEQUENTIAL_INFO / MMEXTEND_INFO*)",
+   "base": "union u4",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "FileObject": {
+   "name": "FileObject",
+   "offset": 128,
+   "decl": "struct _FILE_OBJECT* FileObject",
+   "base": "struct _FILE_OBJECT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ }
+}

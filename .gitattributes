@@ -1,0 +1,9 @@
+apps/web/public/sogen/32/analyzer.wasm filter=lfs diff=lfs merge=lfs -text
+apps/web/public/vendor/ghidra/** filter=lfs diff=lfs merge=lfs -text
+apps/web/public/dumps/** filter=lfs diff=lfs merge=lfs -text
+apps/web/public/vendor/** filter=lfs diff=lfs merge=lfs -text
+apps/analyzer-web/public/** filter=lfs diff=lfs merge=lfs -text
+packages/v86-lab/vendor/** filter=lfs diff=lfs merge=lfs -text
+packages/ntsim-assets/data/** filter=lfs diff=lfs merge=lfs -text
+*.wasm filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text

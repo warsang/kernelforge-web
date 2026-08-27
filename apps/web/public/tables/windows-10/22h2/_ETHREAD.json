@@ -1,0 +1,1755 @@
+{
+ "name": "ETHREAD",
+ "totalSize": 2200,
+ "fieldCount": 120,
+ "fieldsByName": {
+  "Tcb": {
+   "name": "Tcb",
+   "offset": 0,
+   "decl": "struct _KTHREAD Tcb",
+   "base": "struct _KTHREAD",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CreateTime": {
+   "name": "CreateTime",
+   "offset": 1072,
+   "decl": "union _LARGE_INTEGER CreateTime",
+   "base": "union _LARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ExitTime": {
+   "name": "ExitTime",
+   "offset": 1080,
+   "decl": "union _LARGE_INTEGER ExitTime",
+   "base": "union _LARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "KeyedWaitChain": {
+   "name": "KeyedWaitChain",
+   "offset": 1080,
+   "decl": "struct _LIST_ENTRY KeyedWaitChain",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PostBlockList": {
+   "name": "PostBlockList",
+   "offset": 1096,
+   "decl": "struct _LIST_ENTRY PostBlockList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ForwardLinkShadow": {
+   "name": "ForwardLinkShadow",
+   "offset": 1096,
+   "decl": "VOID* ForwardLinkShadow",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "StartAddress": {
+   "name": "StartAddress",
+   "offset": 1104,
+   "decl": "VOID* StartAddress",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "TerminationPort": {
+   "name": "TerminationPort",
+   "offset": 1112,
+   "decl": "struct _TERMINATION_PORT* TerminationPort",
+   "base": "struct _TERMINATION_PORT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ReaperLink": {
+   "name": "ReaperLink",
+   "offset": 1112,
+   "decl": "struct _ETHREAD* ReaperLink",
+   "base": "struct _ETHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "KeyedWaitValue": {
+   "name": "KeyedWaitValue",
+   "offset": 1112,
+   "decl": "VOID* KeyedWaitValue",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ActiveTimerListLock": {
+   "name": "ActiveTimerListLock",
+   "offset": 1120,
+   "decl": "ULONGLONG ActiveTimerListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ActiveTimerListHead": {
+   "name": "ActiveTimerListHead",
+   "offset": 1128,
+   "decl": "struct _LIST_ENTRY ActiveTimerListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Cid": {
+   "name": "Cid",
+   "offset": 1144,
+   "decl": "struct _CLIENT_ID Cid",
+   "base": "struct _CLIENT_ID",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "KeyedWaitSemaphore": {
+   "name": "KeyedWaitSemaphore",
+   "offset": 1160,
+   "decl": "struct _KSEMAPHORE KeyedWaitSemaphore",
+   "base": "struct _KSEMAPHORE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "AlpcWaitSemaphore": {
+   "name": "AlpcWaitSemaphore",
+   "offset": 1160,
+   "decl": "struct _KSEMAPHORE AlpcWaitSemaphore",
+   "base": "struct _KSEMAPHORE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ClientSecurity": {
+   "name": "ClientSecurity",
+   "offset": 1192,
+   "decl": "union _PS_CLIENT_SECURITY_CONTEXT ClientSecurity",
+   "base": "union _PS_CLIENT_SECURITY_CONTEXT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "IrpList": {
+   "name": "IrpList",
+   "offset": 1200,
+   "decl": "struct _LIST_ENTRY IrpList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TopLevelIrp": {
+   "name": "TopLevelIrp",
+   "offset": 1216,
+   "decl": "ULONGLONG TopLevelIrp",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DeviceToVerify": {
+   "name": "DeviceToVerify",
+   "offset": 1224,
+   "decl": "struct _DEVICE_OBJECT* DeviceToVerify",
+   "base": "struct _DEVICE_OBJECT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Win32StartAddress": {
+   "name": "Win32StartAddress",
+   "offset": 1232,
+   "decl": "VOID* Win32StartAddress",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ChargeOnlySession": {
+   "name": "ChargeOnlySession",
+   "offset": 1240,
+   "decl": "VOID* ChargeOnlySession",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "LegacyPowerObject": {
+   "name": "LegacyPowerObject",
+   "offset": 1248,
+   "decl": "VOID* LegacyPowerObject",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ThreadListEntry": {
+   "name": "ThreadListEntry",
+   "offset": 1256,
+   "decl": "struct _LIST_ENTRY ThreadListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "RundownProtect": {
+   "name": "RundownProtect",
+   "offset": 1272,
+   "decl": "struct _EX_RUNDOWN_REF RundownProtect",
+   "base": "struct _EX_RUNDOWN_REF",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ThreadLock": {
+   "name": "ThreadLock",
+   "offset": 1280,
+   "decl": "struct _EX_PUSH_LOCK ThreadLock",
+   "base": "struct _EX_PUSH_LOCK",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ReadClusterSize": {
+   "name": "ReadClusterSize",
+   "offset": 1288,
+   "decl": "ULONG ReadClusterSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "MmLockOrdering": {
+   "name": "MmLockOrdering",
+   "offset": 1292,
+   "decl": "volatile LONG MmLockOrdering",
+   "base": "volatile LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CrossThreadFlags": {
+   "name": "CrossThreadFlags",
+   "offset": 1296,
+   "decl": "ULONG CrossThreadFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SameThreadPassiveFlags": {
+   "name": "SameThreadPassiveFlags",
+   "offset": 1300,
+   "decl": "ULONG SameThreadPassiveFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SameThreadApcFlags": {
+   "name": "SameThreadApcFlags",
+   "offset": 1304,
+   "decl": "ULONG SameThreadApcFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CacheManagerActive": {
+   "name": "CacheManagerActive",
+   "offset": 1308,
+   "decl": "UCHAR CacheManagerActive",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DisablePageFaultClustering": {
+   "name": "DisablePageFaultClustering",
+   "offset": 1309,
+   "decl": "UCHAR DisablePageFaultClustering",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ActiveFaultCount": {
+   "name": "ActiveFaultCount",
+   "offset": 1310,
+   "decl": "UCHAR ActiveFaultCount",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LockOrderState": {
+   "name": "LockOrderState",
+   "offset": 1311,
+   "decl": "UCHAR LockOrderState",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PerformanceCountLowReserved": {
+   "name": "PerformanceCountLowReserved",
+   "offset": 1312,
+   "decl": "ULONG PerformanceCountLowReserved",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PerformanceCountHighReserved": {
+   "name": "PerformanceCountHighReserved",
+   "offset": 1316,
+   "decl": "LONG PerformanceCountHighReserved",
+   "base": "LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "AlpcMessageId": {
+   "name": "AlpcMessageId",
+   "offset": 1320,
+   "decl": "ULONGLONG AlpcMessageId",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "AlpcMessage": {
+   "name": "AlpcMessage",
+   "offset": 1328,
+   "decl": "VOID* AlpcMessage",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "AlpcReceiveAttributeSet": {
+   "name": "AlpcReceiveAttributeSet",
+   "offset": 1328,
+   "decl": "ULONG AlpcReceiveAttributeSet",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "AlpcWaitListEntry": {
+   "name": "AlpcWaitListEntry",
+   "offset": 1336,
+   "decl": "struct _LIST_ENTRY AlpcWaitListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ExitStatus": {
+   "name": "ExitStatus",
+   "offset": 1352,
+   "decl": "LONG ExitStatus",
+   "base": "LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CacheManagerCount": {
+   "name": "CacheManagerCount",
+   "offset": 1356,
+   "decl": "ULONG CacheManagerCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "IoBoostCount": {
+   "name": "IoBoostCount",
+   "offset": 1360,
+   "decl": "ULONG IoBoostCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "IoQoSBoostCount": {
+   "name": "IoQoSBoostCount",
+   "offset": 1364,
+   "decl": "ULONG IoQoSBoostCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "IoQoSThrottleCount": {
+   "name": "IoQoSThrottleCount",
+   "offset": 1368,
+   "decl": "ULONG IoQoSThrottleCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "KernelStackReference": {
+   "name": "KernelStackReference",
+   "offset": 1372,
+   "decl": "ULONG KernelStackReference",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "BoostList": {
+   "name": "BoostList",
+   "offset": 1376,
+   "decl": "struct _LIST_ENTRY BoostList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DeboostList": {
+   "name": "DeboostList",
+   "offset": 1392,
+   "decl": "struct _LIST_ENTRY DeboostList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "BoostListLock": {
+   "name": "BoostListLock",
+   "offset": 1408,
+   "decl": "ULONGLONG BoostListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "IrpListLock": {
+   "name": "IrpListLock",
+   "offset": 1416,
+   "decl": "ULONGLONG IrpListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ReservedForSynchTracking": {
+   "name": "ReservedForSynchTracking",
+   "offset": 1424,
+   "decl": "VOID* ReservedForSynchTracking",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "CmCallbackListHead": {
+   "name": "CmCallbackListHead",
+   "offset": 1432,
+   "decl": "struct _SINGLE_LIST_ENTRY CmCallbackListHead",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ActivityId": {
+   "name": "ActivityId",
+   "offset": 1440,
+   "decl": "struct _GUID* ActivityId",
+   "base": "struct _GUID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SeLearningModeListHead": {
+   "name": "SeLearningModeListHead",
+   "offset": 1448,
+   "decl": "struct _SINGLE_LIST_ENTRY SeLearningModeListHead",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "VerifierContext": {
+   "name": "VerifierContext",
+   "offset": 1456,
+   "decl": "VOID* VerifierContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "AdjustedClientToken": {
+   "name": "AdjustedClientToken",
+   "offset": 1464,
+   "decl": "VOID* AdjustedClientToken",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "WorkOnBehalfThread": {
+   "name": "WorkOnBehalfThread",
+   "offset": 1472,
+   "decl": "VOID* WorkOnBehalfThread",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "PropertySet": {
+   "name": "PropertySet",
+   "offset": 1480,
+   "decl": "struct _PS_PROPERTY_SET PropertySet",
+   "base": "struct _PS_PROPERTY_SET",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PicoContext": {
+   "name": "PicoContext",
+   "offset": 1504,
+   "decl": "VOID* PicoContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "UserFsBase": {
+   "name": "UserFsBase",
+   "offset": 1512,
+   "decl": "ULONGLONG UserFsBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "UserGsBase": {
+   "name": "UserGsBase",
+   "offset": 1520,
+   "decl": "ULONGLONG UserGsBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "EnergyValues": {
+   "name": "EnergyValues",
+   "offset": 1528,
+   "decl": "struct _THREAD_ENERGY_VALUES* EnergyValues",
+   "base": "struct _THREAD_ENERGY_VALUES*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SelectedCpuSets": {
+   "name": "SelectedCpuSets",
+   "offset": 1536,
+   "decl": "ULONGLONG SelectedCpuSets",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SelectedCpuSetsIndirect": {
+   "name": "SelectedCpuSetsIndirect",
+   "offset": 1536,
+   "decl": "ULONGLONG* SelectedCpuSetsIndirect",
+   "base": "ULONGLONG*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Silo": {
+   "name": "Silo",
+   "offset": 1544,
+   "decl": "struct _EJOB* Silo",
+   "base": "struct _EJOB*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ThreadName": {
+   "name": "ThreadName",
+   "offset": 1552,
+   "decl": "struct _UNICODE_STRING* ThreadName",
+   "base": "struct _UNICODE_STRING*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SetContextState": {
+   "name": "SetContextState",
+   "offset": 1560,
+   "decl": "struct _CONTEXT* SetContextState",
+   "base": "struct _CONTEXT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "LastExpectedRunTime": {
+   "name": "LastExpectedRunTime",
+   "offset": 1568,
+   "decl": "ULONG LastExpectedRunTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HeapData": {
+   "name": "HeapData",
+   "offset": 1572,
+   "decl": "ULONG HeapData",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "OwnerEntryListHead": {
+   "name": "OwnerEntryListHead",
+   "offset": 1576,
+   "decl": "struct _LIST_ENTRY OwnerEntryListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DisownedOwnerEntryListLock": {
+   "name": "DisownedOwnerEntryListLock",
+   "offset": 1592,
+   "decl": "ULONGLONG DisownedOwnerEntryListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DisownedOwnerEntryListHead": {
+   "name": "DisownedOwnerEntryListHead",
+   "offset": 1600,
+   "decl": "struct _LIST_ENTRY DisownedOwnerEntryListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LockEntries": {
+   "name": "LockEntries",
+   "offset": 1616,
+   "decl": "struct _KLOCK_ENTRY LockEntries[6]",
+   "base": "struct _KLOCK_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": 6
+  },
+  "CmDbgInfo": {
+   "name": "CmDbgInfo",
+   "offset": 2192,
+   "decl": "VOID* CmDbgInfo",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "Tcb",
+   "offset": 0,
+   "decl": "struct _KTHREAD Tcb",
+   "base": "struct _KTHREAD",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CreateTime",
+   "offset": 1072,
+   "decl": "union _LARGE_INTEGER CreateTime",
+   "base": "union _LARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ExitTime",
+   "offset": 1080,
+   "decl": "union _LARGE_INTEGER ExitTime",
+   "base": "union _LARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "KeyedWaitChain",
+   "offset": 1080,
+   "decl": "struct _LIST_ENTRY KeyedWaitChain",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PostBlockList",
+   "offset": 1096,
+   "decl": "struct _LIST_ENTRY PostBlockList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ForwardLinkShadow",
+   "offset": 1096,
+   "decl": "VOID* ForwardLinkShadow",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "StartAddress",
+   "offset": 1104,
+   "decl": "VOID* StartAddress",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TerminationPort",
+   "offset": 1112,
+   "decl": "struct _TERMINATION_PORT* TerminationPort",
+   "base": "struct _TERMINATION_PORT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ReaperLink",
+   "offset": 1112,
+   "decl": "struct _ETHREAD* ReaperLink",
+   "base": "struct _ETHREAD*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "KeyedWaitValue",
+   "offset": 1112,
+   "decl": "VOID* KeyedWaitValue",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ActiveTimerListLock",
+   "offset": 1120,
+   "decl": "ULONGLONG ActiveTimerListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ActiveTimerListHead",
+   "offset": 1128,
+   "decl": "struct _LIST_ENTRY ActiveTimerListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Cid",
+   "offset": 1144,
+   "decl": "struct _CLIENT_ID Cid",
+   "base": "struct _CLIENT_ID",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "KeyedWaitSemaphore",
+   "offset": 1160,
+   "decl": "struct _KSEMAPHORE KeyedWaitSemaphore",
+   "base": "struct _KSEMAPHORE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AlpcWaitSemaphore",
+   "offset": 1160,
+   "decl": "struct _KSEMAPHORE AlpcWaitSemaphore",
+   "base": "struct _KSEMAPHORE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ClientSecurity",
+   "offset": 1192,
+   "decl": "union _PS_CLIENT_SECURITY_CONTEXT ClientSecurity",
+   "base": "union _PS_CLIENT_SECURITY_CONTEXT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IrpList",
+   "offset": 1200,
+   "decl": "struct _LIST_ENTRY IrpList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TopLevelIrp",
+   "offset": 1216,
+   "decl": "ULONGLONG TopLevelIrp",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DeviceToVerify",
+   "offset": 1224,
+   "decl": "struct _DEVICE_OBJECT* DeviceToVerify",
+   "base": "struct _DEVICE_OBJECT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Win32StartAddress",
+   "offset": 1232,
+   "decl": "VOID* Win32StartAddress",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ChargeOnlySession",
+   "offset": 1240,
+   "decl": "VOID* ChargeOnlySession",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LegacyPowerObject",
+   "offset": 1248,
+   "decl": "VOID* LegacyPowerObject",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ThreadListEntry",
+   "offset": 1256,
+   "decl": "struct _LIST_ENTRY ThreadListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "RundownProtect",
+   "offset": 1272,
+   "decl": "struct _EX_RUNDOWN_REF RundownProtect",
+   "base": "struct _EX_RUNDOWN_REF",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ThreadLock",
+   "offset": 1280,
+   "decl": "struct _EX_PUSH_LOCK ThreadLock",
+   "base": "struct _EX_PUSH_LOCK",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ReadClusterSize",
+   "offset": 1288,
+   "decl": "ULONG ReadClusterSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "MmLockOrdering",
+   "offset": 1292,
+   "decl": "volatile LONG MmLockOrdering",
+   "base": "volatile LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CrossThreadFlags",
+   "offset": 1296,
+   "decl": "ULONG CrossThreadFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG Terminated:1",
+   "base": "ULONG Terminated:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG ThreadInserted:1",
+   "base": "ULONG ThreadInserted:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG HideFromDebugger:1",
+   "base": "ULONG HideFromDebugger:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG ActiveImpersonationInfo:1",
+   "base": "ULONG ActiveImpersonationInfo:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG HardErrorsAreDisabled:1",
+   "base": "ULONG HardErrorsAreDisabled:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG BreakOnTermination:1",
+   "base": "ULONG BreakOnTermination:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG SkipCreationMsg:1",
+   "base": "ULONG SkipCreationMsg:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG SkipTerminationMsg:1",
+   "base": "ULONG SkipTerminationMsg:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG CopyTokenOnOpen:1",
+   "base": "ULONG CopyTokenOnOpen:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG ThreadIoPriority:3",
+   "base": "ULONG ThreadIoPriority:3",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG ThreadPagePriority:3",
+   "base": "ULONG ThreadPagePriority:3",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG RundownFail:1",
+   "base": "ULONG RundownFail:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG UmsForceQueueTermination:1",
+   "base": "ULONG UmsForceQueueTermination:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG IndirectCpuSets:1",
+   "base": "ULONG IndirectCpuSets:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG DisableDynamicCodeOptOut:1",
+   "base": "ULONG DisableDynamicCodeOptOut:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG ExplicitCaseSensitivity:1",
+   "base": "ULONG ExplicitCaseSensitivity:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG PicoNotifyExit:1",
+   "base": "ULONG PicoNotifyExit:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG DbgWerUserReportActive:1",
+   "base": "ULONG DbgWerUserReportActive:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG ForcedSelfTrimActive:1",
+   "base": "ULONG ForcedSelfTrimActive:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG SamplingCoverage:1",
+   "base": "ULONG SamplingCoverage:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1296,
+   "decl": "ULONG ReservedCrossThreadFlags:8",
+   "base": "ULONG ReservedCrossThreadFlags:8",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "SameThreadPassiveFlags",
+   "offset": 1300,
+   "decl": "ULONG SameThreadPassiveFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG ActiveExWorker:1",
+   "base": "ULONG ActiveExWorker:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG MemoryMaker:1",
+   "base": "ULONG MemoryMaker:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG StoreLockThread:2",
+   "base": "ULONG StoreLockThread:2",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG ClonedThread:1",
+   "base": "ULONG ClonedThread:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG KeyedEventInUse:1",
+   "base": "ULONG KeyedEventInUse:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG SelfTerminate:1",
+   "base": "ULONG SelfTerminate:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG RespectIoPriority:1",
+   "base": "ULONG RespectIoPriority:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG ActivePageLists:1",
+   "base": "ULONG ActivePageLists:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG SecureContext:1",
+   "base": "ULONG SecureContext:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG ZeroPageThread:1",
+   "base": "ULONG ZeroPageThread:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG WorkloadClass:1",
+   "base": "ULONG WorkloadClass:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1300,
+   "decl": "ULONG ReservedSameThreadPassiveFlags:20",
+   "base": "ULONG ReservedSameThreadPassiveFlags:20",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "SameThreadApcFlags",
+   "offset": 1304,
+   "decl": "ULONG SameThreadApcFlags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "UCHAR OwnsProcessAddressSpaceExclusive:1",
+   "base": "UCHAR OwnsProcessAddressSpaceExclusive:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "UCHAR OwnsProcessAddressSpaceShared:1",
+   "base": "UCHAR OwnsProcessAddressSpaceShared:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "UCHAR HardFaultBehavior:1",
+   "base": "UCHAR HardFaultBehavior:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "volatile UCHAR StartAddressInvalid:1",
+   "base": "volatile UCHAR StartAddressInvalid:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "UCHAR EtwCalloutActive:1",
+   "base": "UCHAR EtwCalloutActive:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "UCHAR SuppressSymbolLoad:1",
+   "base": "UCHAR SuppressSymbolLoad:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "UCHAR Prefetching:1",
+   "base": "UCHAR Prefetching:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1304,
+   "decl": "UCHAR OwnsVadExclusive:1",
+   "base": "UCHAR OwnsVadExclusive:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1305,
+   "decl": "UCHAR SystemPagePriorityActive:1",
+   "base": "UCHAR SystemPagePriorityActive:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1305,
+   "decl": "UCHAR SystemPagePriority:3",
+   "base": "UCHAR SystemPagePriority:3",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1305,
+   "decl": "UCHAR AllowUserWritesToExecutableMemory:1",
+   "base": "UCHAR AllowUserWritesToExecutableMemory:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1305,
+   "decl": "UCHAR AllowKernelWritesToExecutableMemory:1",
+   "base": "UCHAR AllowKernelWritesToExecutableMemory:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 1305,
+   "decl": "UCHAR OwnsVadShared:1",
+   "base": "UCHAR OwnsVadShared:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "CacheManagerActive",
+   "offset": 1308,
+   "decl": "UCHAR CacheManagerActive",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DisablePageFaultClustering",
+   "offset": 1309,
+   "decl": "UCHAR DisablePageFaultClustering",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ActiveFaultCount",
+   "offset": 1310,
+   "decl": "UCHAR ActiveFaultCount",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LockOrderState",
+   "offset": 1311,
+   "decl": "UCHAR LockOrderState",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PerformanceCountLowReserved",
+   "offset": 1312,
+   "decl": "ULONG PerformanceCountLowReserved",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PerformanceCountHighReserved",
+   "offset": 1316,
+   "decl": "LONG PerformanceCountHighReserved",
+   "base": "LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AlpcMessageId",
+   "offset": 1320,
+   "decl": "ULONGLONG AlpcMessageId",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AlpcMessage",
+   "offset": 1328,
+   "decl": "VOID* AlpcMessage",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AlpcReceiveAttributeSet",
+   "offset": 1328,
+   "decl": "ULONG AlpcReceiveAttributeSet",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AlpcWaitListEntry",
+   "offset": 1336,
+   "decl": "struct _LIST_ENTRY AlpcWaitListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ExitStatus",
+   "offset": 1352,
+   "decl": "LONG ExitStatus",
+   "base": "LONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CacheManagerCount",
+   "offset": 1356,
+   "decl": "ULONG CacheManagerCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IoBoostCount",
+   "offset": 1360,
+   "decl": "ULONG IoBoostCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IoQoSBoostCount",
+   "offset": 1364,
+   "decl": "ULONG IoQoSBoostCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IoQoSThrottleCount",
+   "offset": 1368,
+   "decl": "ULONG IoQoSThrottleCount",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "KernelStackReference",
+   "offset": 1372,
+   "decl": "ULONG KernelStackReference",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BoostList",
+   "offset": 1376,
+   "decl": "struct _LIST_ENTRY BoostList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DeboostList",
+   "offset": 1392,
+   "decl": "struct _LIST_ENTRY DeboostList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BoostListLock",
+   "offset": 1408,
+   "decl": "ULONGLONG BoostListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "IrpListLock",
+   "offset": 1416,
+   "decl": "ULONGLONG IrpListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ReservedForSynchTracking",
+   "offset": 1424,
+   "decl": "VOID* ReservedForSynchTracking",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CmCallbackListHead",
+   "offset": 1432,
+   "decl": "struct _SINGLE_LIST_ENTRY CmCallbackListHead",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ActivityId",
+   "offset": 1440,
+   "decl": "struct _GUID* ActivityId",
+   "base": "struct _GUID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SeLearningModeListHead",
+   "offset": 1448,
+   "decl": "struct _SINGLE_LIST_ENTRY SeLearningModeListHead",
+   "base": "struct _SINGLE_LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "VerifierContext",
+   "offset": 1456,
+   "decl": "VOID* VerifierContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "AdjustedClientToken",
+   "offset": 1464,
+   "decl": "VOID* AdjustedClientToken",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "WorkOnBehalfThread",
+   "offset": 1472,
+   "decl": "VOID* WorkOnBehalfThread",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PropertySet",
+   "offset": 1480,
+   "decl": "struct _PS_PROPERTY_SET PropertySet",
+   "base": "struct _PS_PROPERTY_SET",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PicoContext",
+   "offset": 1504,
+   "decl": "VOID* PicoContext",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "UserFsBase",
+   "offset": 1512,
+   "decl": "ULONGLONG UserFsBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "UserGsBase",
+   "offset": 1520,
+   "decl": "ULONGLONG UserGsBase",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "EnergyValues",
+   "offset": 1528,
+   "decl": "struct _THREAD_ENERGY_VALUES* EnergyValues",
+   "base": "struct _THREAD_ENERGY_VALUES*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SelectedCpuSets",
+   "offset": 1536,
+   "decl": "ULONGLONG SelectedCpuSets",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SelectedCpuSetsIndirect",
+   "offset": 1536,
+   "decl": "ULONGLONG* SelectedCpuSetsIndirect",
+   "base": "ULONGLONG*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Silo",
+   "offset": 1544,
+   "decl": "struct _EJOB* Silo",
+   "base": "struct _EJOB*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ThreadName",
+   "offset": 1552,
+   "decl": "struct _UNICODE_STRING* ThreadName",
+   "base": "struct _UNICODE_STRING*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SetContextState",
+   "offset": 1560,
+   "decl": "struct _CONTEXT* SetContextState",
+   "base": "struct _CONTEXT*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LastExpectedRunTime",
+   "offset": 1568,
+   "decl": "ULONG LastExpectedRunTime",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HeapData",
+   "offset": 1572,
+   "decl": "ULONG HeapData",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "OwnerEntryListHead",
+   "offset": 1576,
+   "decl": "struct _LIST_ENTRY OwnerEntryListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DisownedOwnerEntryListLock",
+   "offset": 1592,
+   "decl": "ULONGLONG DisownedOwnerEntryListLock",
+   "base": "ULONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DisownedOwnerEntryListHead",
+   "offset": 1600,
+   "decl": "struct _LIST_ENTRY DisownedOwnerEntryListHead",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LockEntries",
+   "offset": 1616,
+   "decl": "struct _KLOCK_ENTRY LockEntries[6]",
+   "base": "struct _KLOCK_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": 6
+  },
+  {
+   "name": "CmDbgInfo",
+   "offset": 2192,
+   "decl": "VOID* CmDbgInfo",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

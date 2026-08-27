@@ -1,0 +1,333 @@
+{
+ "name": "OBJECT_HEADER",
+ "totalSize": 56,
+ "fieldCount": 23,
+ "fieldsByName": {
+  "PointerCount": {
+   "name": "PointerCount",
+   "offset": 0,
+   "decl": "LONGLONG PointerCount",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HandleCount": {
+   "name": "HandleCount",
+   "offset": 8,
+   "decl": "LONGLONG HandleCount",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "NextToFree": {
+   "name": "NextToFree",
+   "offset": 8,
+   "decl": "VOID* NextToFree",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Lock": {
+   "name": "Lock",
+   "offset": 16,
+   "decl": "struct _EX_PUSH_LOCK Lock",
+   "base": "struct _EX_PUSH_LOCK",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TypeIndex": {
+   "name": "TypeIndex",
+   "offset": 24,
+   "decl": "UCHAR TypeIndex",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TraceFlags": {
+   "name": "TraceFlags",
+   "offset": 25,
+   "decl": "UCHAR TraceFlags",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "InfoMask": {
+   "name": "InfoMask",
+   "offset": 26,
+   "decl": "UCHAR InfoMask",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Flags": {
+   "name": "Flags",
+   "offset": 27,
+   "decl": "UCHAR Flags",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Reserved": {
+   "name": "Reserved",
+   "offset": 28,
+   "decl": "ULONG Reserved",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ObjectCreateInfo": {
+   "name": "ObjectCreateInfo",
+   "offset": 32,
+   "decl": "struct _OBJECT_CREATE_INFORMATION* ObjectCreateInfo",
+   "base": "struct _OBJECT_CREATE_INFORMATION*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "QuotaBlockCharged": {
+   "name": "QuotaBlockCharged",
+   "offset": 32,
+   "decl": "VOID* QuotaBlockCharged",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SecurityDescriptor": {
+   "name": "SecurityDescriptor",
+   "offset": 40,
+   "decl": "VOID* SecurityDescriptor",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Body": {
+   "name": "Body",
+   "offset": 48,
+   "decl": "struct _QUAD Body",
+   "base": "struct _QUAD",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "PointerCount",
+   "offset": 0,
+   "decl": "LONGLONG PointerCount",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HandleCount",
+   "offset": 8,
+   "decl": "LONGLONG HandleCount",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "NextToFree",
+   "offset": 8,
+   "decl": "VOID* NextToFree",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Lock",
+   "offset": 16,
+   "decl": "struct _EX_PUSH_LOCK Lock",
+   "base": "struct _EX_PUSH_LOCK",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TypeIndex",
+   "offset": 24,
+   "decl": "UCHAR TypeIndex",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TraceFlags",
+   "offset": 25,
+   "decl": "UCHAR TraceFlags",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 25,
+   "decl": "UCHAR DbgRefTrace:1",
+   "base": "UCHAR DbgRefTrace:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 25,
+   "decl": "UCHAR DbgTracePermanent:1",
+   "base": "UCHAR DbgTracePermanent:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "InfoMask",
+   "offset": 26,
+   "decl": "UCHAR InfoMask",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Flags",
+   "offset": 27,
+   "decl": "UCHAR Flags",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR NewObject:1",
+   "base": "UCHAR NewObject:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR KernelObject:1",
+   "base": "UCHAR KernelObject:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR KernelOnlyAccess:1",
+   "base": "UCHAR KernelOnlyAccess:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR ExclusiveObject:1",
+   "base": "UCHAR ExclusiveObject:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR PermanentObject:1",
+   "base": "UCHAR PermanentObject:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR DefaultSecurityQuota:1",
+   "base": "UCHAR DefaultSecurityQuota:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR SingleHandleEntry:1",
+   "base": "UCHAR SingleHandleEntry:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 27,
+   "decl": "UCHAR DeletedInline:1",
+   "base": "UCHAR DeletedInline:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "Reserved",
+   "offset": 28,
+   "decl": "ULONG Reserved",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ObjectCreateInfo",
+   "offset": 32,
+   "decl": "struct _OBJECT_CREATE_INFORMATION* ObjectCreateInfo",
+   "base": "struct _OBJECT_CREATE_INFORMATION*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "QuotaBlockCharged",
+   "offset": 32,
+   "decl": "VOID* QuotaBlockCharged",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SecurityDescriptor",
+   "offset": 40,
+   "decl": "VOID* SecurityDescriptor",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Body",
+   "offset": 48,
+   "decl": "struct _QUAD Body",
+   "base": "struct _QUAD",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

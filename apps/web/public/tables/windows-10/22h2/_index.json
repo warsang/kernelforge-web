@@ -1,0 +1,87 @@
+{
+ "family": "windows-10",
+ "build": "22h2",
+ "source": "VergiliusProject (CC0)",
+ "types": {
+  "_EPROCESS": {
+   "size": 2624,
+   "fields": 299
+  },
+  "_ETHREAD": {
+   "size": 2200,
+   "fields": 120
+  },
+  "_KPROCESS": {
+   "size": 1080,
+   "fields": 58
+  },
+  "_KTHREAD": {
+   "size": 1072,
+   "fields": 204
+  },
+  "_KPCR": {
+   "size": 376,
+   "fields": 26
+  },
+  "_KPRCB": {
+   "size": 1792,
+   "fields": 52
+  },
+  "_KLDR_DATA_TABLE_ENTRY": {
+   "size": 160,
+   "fields": 25
+  },
+  "_LDR_DATA_TABLE_ENTRY": {
+   "size": 288,
+   "fields": 59
+  },
+  "_OBJECT_TYPE": {
+   "size": 216,
+   "fields": 12
+  },
+  "_OBJECT_TYPE_INITIALIZER": {
+   "size": 120,
+   "fields": 32
+  },
+  "_OBJECT_HEADER": {
+   "size": 56,
+   "fields": 23
+  },
+  "_HANDLE_TABLE": {
+   "size": 128,
+   "fields": 17
+  },
+  "_HANDLE_TABLE_ENTRY": {
+   "size": 16,
+   "fields": 15
+  },
+  "_LIST_ENTRY": {
+   "size": 16,
+   "fields": 2
+  },
+  "_UNICODE_STRING": {
+   "size": 16,
+   "fields": 3
+  },
+  "_PS_PROTECTION": {
+   "size": 1,
+   "fields": 4
+  },
+  "_POOL_HEADER": {
+   "size": 16,
+   "fields": 9
+  },
+  "_KDPC": {
+   "size": 64,
+   "fields": 11
+  },
+  "_KTIMER": {
+   "size": 64,
+   "fields": 7
+  },
+  "_DISPATCHER_HEADER": {
+   "size": 24,
+   "fields": 59
+  }
+ }
+}

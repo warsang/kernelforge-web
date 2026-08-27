@@ -1,0 +1,45 @@
+{
+ "name": "LIST_ENTRY",
+ "totalSize": 16,
+ "fieldCount": 2,
+ "fieldsByName": {
+  "Flink": {
+   "name": "Flink",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY* Flink",
+   "base": "struct _LIST_ENTRY*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Blink": {
+   "name": "Blink",
+   "offset": 8,
+   "decl": "struct _LIST_ENTRY* Blink",
+   "base": "struct _LIST_ENTRY*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "Flink",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY* Flink",
+   "base": "struct _LIST_ENTRY*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Blink",
+   "offset": 8,
+   "decl": "struct _LIST_ENTRY* Blink",
+   "base": "struct _LIST_ENTRY*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

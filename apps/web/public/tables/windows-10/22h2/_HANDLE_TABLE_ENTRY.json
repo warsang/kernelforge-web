@@ -1,0 +1,216 @@
+{
+ "name": "HANDLE_TABLE_ENTRY",
+ "totalSize": 16,
+ "fieldCount": 15,
+ "fieldsByName": {
+  "VolatileLowValue": {
+   "name": "VolatileLowValue",
+   "offset": 0,
+   "decl": "volatile LONGLONG VolatileLowValue",
+   "base": "volatile LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LowValue": {
+   "name": "LowValue",
+   "offset": 0,
+   "decl": "LONGLONG LowValue",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "InfoTable": {
+   "name": "InfoTable",
+   "offset": 0,
+   "decl": "struct _HANDLE_TABLE_ENTRY_INFO* volatile InfoTable",
+   "base": "struct _HANDLE_TABLE_ENTRY_INFO*",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HighValue": {
+   "name": "HighValue",
+   "offset": 8,
+   "decl": "LONGLONG HighValue",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "NextFreeHandleEntry": {
+   "name": "NextFreeHandleEntry",
+   "offset": 8,
+   "decl": "union _HANDLE_TABLE_ENTRY* NextFreeHandleEntry",
+   "base": "union _HANDLE_TABLE_ENTRY*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "LeafHandleValue": {
+   "name": "LeafHandleValue",
+   "offset": 8,
+   "decl": "struct _EXHANDLE LeafHandleValue",
+   "base": "struct _EXHANDLE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "RefCountField": {
+   "name": "RefCountField",
+   "offset": 0,
+   "decl": "LONGLONG RefCountField",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Spare2": {
+   "name": "Spare2",
+   "offset": 12,
+   "decl": "ULONG Spare2",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "VolatileLowValue",
+   "offset": 0,
+   "decl": "volatile LONGLONG VolatileLowValue",
+   "base": "volatile LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LowValue",
+   "offset": 0,
+   "decl": "LONGLONG LowValue",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "InfoTable",
+   "offset": 0,
+   "decl": "struct _HANDLE_TABLE_ENTRY_INFO* volatile InfoTable",
+   "base": "struct _HANDLE_TABLE_ENTRY_INFO*",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HighValue",
+   "offset": 8,
+   "decl": "LONGLONG HighValue",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "NextFreeHandleEntry",
+   "offset": 8,
+   "decl": "union _HANDLE_TABLE_ENTRY* NextFreeHandleEntry",
+   "base": "union _HANDLE_TABLE_ENTRY*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LeafHandleValue",
+   "offset": 8,
+   "decl": "struct _EXHANDLE LeafHandleValue",
+   "base": "struct _EXHANDLE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "RefCountField",
+   "offset": 0,
+   "decl": "LONGLONG RefCountField",
+   "base": "LONGLONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "ULONGLONG Unlocked:1",
+   "base": "ULONGLONG Unlocked:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "ULONGLONG RefCnt:16",
+   "base": "ULONGLONG RefCnt:16",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "ULONGLONG Attributes:3",
+   "base": "ULONGLONG Attributes:3",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "ULONGLONG ObjectPointerBits:44",
+   "base": "ULONGLONG ObjectPointerBits:44",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 8,
+   "decl": "ULONG GrantedAccessBits:25",
+   "base": "ULONG GrantedAccessBits:25",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 8,
+   "decl": "ULONG NoRightsUpgrade:1",
+   "base": "ULONG NoRightsUpgrade:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 8,
+   "decl": "ULONG Spare1:6",
+   "base": "ULONG Spare1:6",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "Spare2",
+   "offset": 12,
+   "decl": "ULONG Spare2",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

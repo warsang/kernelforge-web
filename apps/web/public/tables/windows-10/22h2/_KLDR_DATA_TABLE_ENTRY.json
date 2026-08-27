@@ -1,0 +1,432 @@
+{
+ "name": "KLDR_DATA_TABLE_ENTRY",
+ "totalSize": 160,
+ "fieldCount": 25,
+ "fieldsByName": {
+  "InLoadOrderLinks": {
+   "name": "InLoadOrderLinks",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY InLoadOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ExceptionTable": {
+   "name": "ExceptionTable",
+   "offset": 16,
+   "decl": "VOID* ExceptionTable",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "ExceptionTableSize": {
+   "name": "ExceptionTableSize",
+   "offset": 24,
+   "decl": "ULONG ExceptionTableSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "GpValue": {
+   "name": "GpValue",
+   "offset": 32,
+   "decl": "VOID* GpValue",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "NonPagedDebugInfo": {
+   "name": "NonPagedDebugInfo",
+   "offset": 40,
+   "decl": "struct _NON_PAGED_DEBUG_INFO* NonPagedDebugInfo",
+   "base": "struct _NON_PAGED_DEBUG_INFO*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "DllBase": {
+   "name": "DllBase",
+   "offset": 48,
+   "decl": "VOID* DllBase",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "EntryPoint": {
+   "name": "EntryPoint",
+   "offset": 56,
+   "decl": "VOID* EntryPoint",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SizeOfImage": {
+   "name": "SizeOfImage",
+   "offset": 64,
+   "decl": "ULONG SizeOfImage",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "FullDllName": {
+   "name": "FullDllName",
+   "offset": 72,
+   "decl": "struct _UNICODE_STRING FullDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "BaseDllName": {
+   "name": "BaseDllName",
+   "offset": 88,
+   "decl": "struct _UNICODE_STRING BaseDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Flags": {
+   "name": "Flags",
+   "offset": 104,
+   "decl": "ULONG Flags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "LoadCount": {
+   "name": "LoadCount",
+   "offset": 108,
+   "decl": "USHORT LoadCount",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "EntireField": {
+   "name": "EntireField",
+   "offset": 110,
+   "decl": "USHORT EntireField",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "u1": {
+   "name": "u1",
+   "offset": 110,
+   "decl": "} u1",
+   "base": "}",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "SectionPointer": {
+   "name": "SectionPointer",
+   "offset": 112,
+   "decl": "VOID* SectionPointer",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "CheckSum": {
+   "name": "CheckSum",
+   "offset": 120,
+   "decl": "ULONG CheckSum",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CoverageSectionSize": {
+   "name": "CoverageSectionSize",
+   "offset": 124,
+   "decl": "ULONG CoverageSectionSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CoverageSection": {
+   "name": "CoverageSection",
+   "offset": 128,
+   "decl": "VOID* CoverageSection",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "LoadedImports": {
+   "name": "LoadedImports",
+   "offset": 136,
+   "decl": "VOID* LoadedImports",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Spare": {
+   "name": "Spare",
+   "offset": 144,
+   "decl": "VOID* Spare",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "SizeOfImageNotRounded": {
+   "name": "SizeOfImageNotRounded",
+   "offset": 152,
+   "decl": "ULONG SizeOfImageNotRounded",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TimeDateStamp": {
+   "name": "TimeDateStamp",
+   "offset": 156,
+   "decl": "ULONG TimeDateStamp",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "InLoadOrderLinks",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY InLoadOrderLinks",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ExceptionTable",
+   "offset": 16,
+   "decl": "VOID* ExceptionTable",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ExceptionTableSize",
+   "offset": 24,
+   "decl": "ULONG ExceptionTableSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "GpValue",
+   "offset": 32,
+   "decl": "VOID* GpValue",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "NonPagedDebugInfo",
+   "offset": 40,
+   "decl": "struct _NON_PAGED_DEBUG_INFO* NonPagedDebugInfo",
+   "base": "struct _NON_PAGED_DEBUG_INFO*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DllBase",
+   "offset": 48,
+   "decl": "VOID* DllBase",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "EntryPoint",
+   "offset": 56,
+   "decl": "VOID* EntryPoint",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SizeOfImage",
+   "offset": 64,
+   "decl": "ULONG SizeOfImage",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "FullDllName",
+   "offset": 72,
+   "decl": "struct _UNICODE_STRING FullDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "BaseDllName",
+   "offset": 88,
+   "decl": "struct _UNICODE_STRING BaseDllName",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Flags",
+   "offset": 104,
+   "decl": "ULONG Flags",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LoadCount",
+   "offset": 108,
+   "decl": "USHORT LoadCount",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 110,
+   "decl": "USHORT SignatureLevel:4",
+   "base": "USHORT SignatureLevel:4",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 110,
+   "decl": "USHORT SignatureType:3",
+   "base": "USHORT SignatureType:3",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 110,
+   "decl": "USHORT Unused:9",
+   "base": "USHORT Unused:9",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "EntireField",
+   "offset": 110,
+   "decl": "USHORT EntireField",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "u1",
+   "offset": 110,
+   "decl": "} u1",
+   "base": "}",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SectionPointer",
+   "offset": 112,
+   "decl": "VOID* SectionPointer",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CheckSum",
+   "offset": 120,
+   "decl": "ULONG CheckSum",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CoverageSectionSize",
+   "offset": 124,
+   "decl": "ULONG CoverageSectionSize",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CoverageSection",
+   "offset": 128,
+   "decl": "VOID* CoverageSection",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "LoadedImports",
+   "offset": 136,
+   "decl": "VOID* LoadedImports",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Spare",
+   "offset": 144,
+   "decl": "VOID* Spare",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "SizeOfImageNotRounded",
+   "offset": 152,
+   "decl": "ULONG SizeOfImageNotRounded",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TimeDateStamp",
+   "offset": 156,
+   "decl": "ULONG TimeDateStamp",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

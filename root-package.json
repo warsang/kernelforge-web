@@ -1,0 +1,33 @@
+{
+  "name": "kernelforge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser-native red team / EDR bypass / game hacking course platform",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run bridge & npm run web",
+    "build": "npm run build --workspace @kernelforge/web",
+    "test": "node --test packages/*/test/*.test.mjs apps/*/test/*.test.mjs",
+    "typecheck": "tsc --build",
+    "assets": "npm run build --workspace @kernelforge/ntsim-assets",
+    "bridge": "node apps/web/compile-bridge.mjs",
+    "web": "npm run dev --workspace @kernelforge/web",
+    "carve": "node packages/ntsim-assets/scripts/carve-dump.mjs",
+    "vendor:sogen": "node tools/fetch-sogen-wasm.mjs",
+    "vendor:ghidra": "node tools/build-ghidra-wasm.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "wrangler": "^4.127.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "flatbuffers": "^25.9.23",
+    "z3-solver": "^5.2.0"
+  }
+}

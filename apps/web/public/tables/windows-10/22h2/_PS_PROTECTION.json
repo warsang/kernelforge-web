@@ -1,0 +1,54 @@
+{
+ "name": "PS_PROTECTION",
+ "totalSize": 1,
+ "fieldCount": 4,
+ "fieldsByName": {
+  "Level": {
+   "name": "Level",
+   "offset": 0,
+   "decl": "UCHAR Level",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "Level",
+   "offset": 0,
+   "decl": "UCHAR Level",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "UCHAR Type:3",
+   "base": "UCHAR Type:3",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "UCHAR Audit:1",
+   "base": "UCHAR Audit:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 0,
+   "decl": "UCHAR Signer:4",
+   "base": "UCHAR Signer:4",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "name": "UNICODE_STRING",
+ "totalSize": 16,
+ "fieldCount": 3,
+ "fieldsByName": {
+  "Length": {
+   "name": "Length",
+   "offset": 0,
+   "decl": "USHORT Length",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "MaximumLength": {
+   "name": "MaximumLength",
+   "offset": 2,
+   "decl": "USHORT MaximumLength",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Buffer": {
+   "name": "Buffer",
+   "offset": 8,
+   "decl": "WCHAR* Buffer",
+   "base": "WCHAR*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "Length",
+   "offset": 0,
+   "decl": "USHORT Length",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "MaximumLength",
+   "offset": 2,
+   "decl": "USHORT MaximumLength",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Buffer",
+   "offset": 8,
+   "decl": "WCHAR* Buffer",
+   "base": "WCHAR*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

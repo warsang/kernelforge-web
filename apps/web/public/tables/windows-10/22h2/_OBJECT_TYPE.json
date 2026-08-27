@@ -1,0 +1,225 @@
+{
+ "name": "OBJECT_TYPE",
+ "totalSize": 216,
+ "fieldCount": 12,
+ "fieldsByName": {
+  "TypeList": {
+   "name": "TypeList",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY TypeList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Name": {
+   "name": "Name",
+   "offset": 16,
+   "decl": "struct _UNICODE_STRING Name",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DefaultObject": {
+   "name": "DefaultObject",
+   "offset": 32,
+   "decl": "VOID* DefaultObject",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Index": {
+   "name": "Index",
+   "offset": 40,
+   "decl": "UCHAR Index",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TotalNumberOfObjects": {
+   "name": "TotalNumberOfObjects",
+   "offset": 44,
+   "decl": "ULONG TotalNumberOfObjects",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TotalNumberOfHandles": {
+   "name": "TotalNumberOfHandles",
+   "offset": 48,
+   "decl": "ULONG TotalNumberOfHandles",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HighWaterNumberOfObjects": {
+   "name": "HighWaterNumberOfObjects",
+   "offset": 52,
+   "decl": "ULONG HighWaterNumberOfObjects",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "HighWaterNumberOfHandles": {
+   "name": "HighWaterNumberOfHandles",
+   "offset": 56,
+   "decl": "ULONG HighWaterNumberOfHandles",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TypeInfo": {
+   "name": "TypeInfo",
+   "offset": 64,
+   "decl": "struct _OBJECT_TYPE_INITIALIZER TypeInfo",
+   "base": "struct _OBJECT_TYPE_INITIALIZER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TypeLock": {
+   "name": "TypeLock",
+   "offset": 184,
+   "decl": "struct _EX_PUSH_LOCK TypeLock",
+   "base": "struct _EX_PUSH_LOCK",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Key": {
+   "name": "Key",
+   "offset": 192,
+   "decl": "ULONG Key",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "CallbackList": {
+   "name": "CallbackList",
+   "offset": 200,
+   "decl": "struct _LIST_ENTRY CallbackList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "TypeList",
+   "offset": 0,
+   "decl": "struct _LIST_ENTRY TypeList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Name",
+   "offset": 16,
+   "decl": "struct _UNICODE_STRING Name",
+   "base": "struct _UNICODE_STRING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DefaultObject",
+   "offset": 32,
+   "decl": "VOID* DefaultObject",
+   "base": "VOID*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Index",
+   "offset": 40,
+   "decl": "UCHAR Index",
+   "base": "UCHAR",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TotalNumberOfObjects",
+   "offset": 44,
+   "decl": "ULONG TotalNumberOfObjects",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TotalNumberOfHandles",
+   "offset": 48,
+   "decl": "ULONG TotalNumberOfHandles",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HighWaterNumberOfObjects",
+   "offset": 52,
+   "decl": "ULONG HighWaterNumberOfObjects",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "HighWaterNumberOfHandles",
+   "offset": 56,
+   "decl": "ULONG HighWaterNumberOfHandles",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TypeInfo",
+   "offset": 64,
+   "decl": "struct _OBJECT_TYPE_INITIALIZER TypeInfo",
+   "base": "struct _OBJECT_TYPE_INITIALIZER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TypeLock",
+   "offset": 184,
+   "decl": "struct _EX_PUSH_LOCK TypeLock",
+   "base": "struct _EX_PUSH_LOCK",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Key",
+   "offset": 192,
+   "decl": "ULONG Key",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "CallbackList",
+   "offset": 200,
+   "decl": "struct _LIST_ENTRY CallbackList",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

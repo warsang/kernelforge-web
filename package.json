@@ -1,0 +1,11 @@
+{
+  "name": "kernelforge-web",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build --workspace @kernelforge/web && npm run build --workspace @kernelforge/analyzer-web",
+    "preview": "vite preview"
+  }
+}

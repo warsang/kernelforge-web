@@ -1,0 +1,135 @@
+{
+ "name": "KTIMER",
+ "totalSize": 64,
+ "fieldCount": 7,
+ "fieldsByName": {
+  "Header": {
+   "name": "Header",
+   "offset": 0,
+   "decl": "struct _DISPATCHER_HEADER Header",
+   "base": "struct _DISPATCHER_HEADER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DueTime": {
+   "name": "DueTime",
+   "offset": 24,
+   "decl": "union _ULARGE_INTEGER DueTime",
+   "base": "union _ULARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TimerListEntry": {
+   "name": "TimerListEntry",
+   "offset": 32,
+   "decl": "struct _LIST_ENTRY TimerListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Dpc": {
+   "name": "Dpc",
+   "offset": 48,
+   "decl": "struct _KDPC* Dpc",
+   "base": "struct _KDPC*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  "Processor": {
+   "name": "Processor",
+   "offset": 56,
+   "decl": "USHORT Processor",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "TimerType": {
+   "name": "TimerType",
+   "offset": 58,
+   "decl": "USHORT TimerType",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "Period": {
+   "name": "Period",
+   "offset": 60,
+   "decl": "ULONG Period",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "Header",
+   "offset": 0,
+   "decl": "struct _DISPATCHER_HEADER Header",
+   "base": "struct _DISPATCHER_HEADER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DueTime",
+   "offset": 24,
+   "decl": "union _ULARGE_INTEGER DueTime",
+   "base": "union _ULARGE_INTEGER",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TimerListEntry",
+   "offset": 32,
+   "decl": "struct _LIST_ENTRY TimerListEntry",
+   "base": "struct _LIST_ENTRY",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Dpc",
+   "offset": 48,
+   "decl": "struct _KDPC* Dpc",
+   "base": "struct _KDPC*",
+   "pointer": true,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Processor",
+   "offset": 56,
+   "decl": "USHORT Processor",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "TimerType",
+   "offset": 58,
+   "decl": "USHORT TimerType",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "Period",
+   "offset": 60,
+   "decl": "ULONG Period",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}

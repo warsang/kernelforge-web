@@ -1,0 +1,414 @@
+{
+ "name": "OBJECT_TYPE_INITIALIZER",
+ "totalSize": 120,
+ "fieldCount": 32,
+ "fieldsByName": {
+  "Length": {
+   "name": "Length",
+   "offset": 0,
+   "decl": "USHORT Length",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ObjectTypeFlags": {
+   "name": "ObjectTypeFlags",
+   "offset": 2,
+   "decl": "USHORT ObjectTypeFlags",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ObjectTypeCode": {
+   "name": "ObjectTypeCode",
+   "offset": 4,
+   "decl": "ULONG ObjectTypeCode",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "InvalidAttributes": {
+   "name": "InvalidAttributes",
+   "offset": 8,
+   "decl": "ULONG InvalidAttributes",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "GenericMapping": {
+   "name": "GenericMapping",
+   "offset": 12,
+   "decl": "struct _GENERIC_MAPPING GenericMapping",
+   "base": "struct _GENERIC_MAPPING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "ValidAccessMask": {
+   "name": "ValidAccessMask",
+   "offset": 28,
+   "decl": "ULONG ValidAccessMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "RetainAccess": {
+   "name": "RetainAccess",
+   "offset": 32,
+   "decl": "ULONG RetainAccess",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "PoolType": {
+   "name": "PoolType",
+   "offset": 36,
+   "decl": "enum _POOL_TYPE PoolType",
+   "base": "enum _POOL_TYPE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DefaultPagedPoolCharge": {
+   "name": "DefaultPagedPoolCharge",
+   "offset": 40,
+   "decl": "ULONG DefaultPagedPoolCharge",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "DefaultNonPagedPoolCharge": {
+   "name": "DefaultNonPagedPoolCharge",
+   "offset": 44,
+   "decl": "ULONG DefaultNonPagedPoolCharge",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "WaitObjectFlagMask": {
+   "name": "WaitObjectFlagMask",
+   "offset": 112,
+   "decl": "ULONG WaitObjectFlagMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "WaitObjectFlagOffset": {
+   "name": "WaitObjectFlagOffset",
+   "offset": 116,
+   "decl": "USHORT WaitObjectFlagOffset",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  "WaitObjectPointerOffset": {
+   "name": "WaitObjectPointerOffset",
+   "offset": 118,
+   "decl": "USHORT WaitObjectPointerOffset",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ },
+ "fields": [
+  {
+   "name": "Length",
+   "offset": 0,
+   "decl": "USHORT Length",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ObjectTypeFlags",
+   "offset": 2,
+   "decl": "USHORT ObjectTypeFlags",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR CaseInsensitive:1",
+   "base": "UCHAR CaseInsensitive:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR UnnamedObjectsOnly:1",
+   "base": "UCHAR UnnamedObjectsOnly:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR UseDefaultObject:1",
+   "base": "UCHAR UseDefaultObject:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR SecurityRequired:1",
+   "base": "UCHAR SecurityRequired:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR MaintainHandleCount:1",
+   "base": "UCHAR MaintainHandleCount:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR MaintainTypeList:1",
+   "base": "UCHAR MaintainTypeList:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR SupportsObjectCallbacks:1",
+   "base": "UCHAR SupportsObjectCallbacks:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 2,
+   "decl": "UCHAR CacheAligned:1",
+   "base": "UCHAR CacheAligned:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 3,
+   "decl": "UCHAR UseExtendedParameters:1",
+   "base": "UCHAR UseExtendedParameters:1",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 3,
+   "decl": "UCHAR Reserved:7",
+   "base": "UCHAR Reserved:7",
+   "pointer": false,
+   "bitfield": true,
+   "array": null
+  },
+  {
+   "name": "ObjectTypeCode",
+   "offset": 4,
+   "decl": "ULONG ObjectTypeCode",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "InvalidAttributes",
+   "offset": 8,
+   "decl": "ULONG InvalidAttributes",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "GenericMapping",
+   "offset": 12,
+   "decl": "struct _GENERIC_MAPPING GenericMapping",
+   "base": "struct _GENERIC_MAPPING",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "ValidAccessMask",
+   "offset": 28,
+   "decl": "ULONG ValidAccessMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "RetainAccess",
+   "offset": 32,
+   "decl": "ULONG RetainAccess",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "PoolType",
+   "offset": 36,
+   "decl": "enum _POOL_TYPE PoolType",
+   "base": "enum _POOL_TYPE",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DefaultPagedPoolCharge",
+   "offset": 40,
+   "decl": "ULONG DefaultPagedPoolCharge",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "DefaultNonPagedPoolCharge",
+   "offset": 44,
+   "decl": "ULONG DefaultNonPagedPoolCharge",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 48,
+   "decl": "VOID (*DumpProcedure)(VOID* arg1, struct _OBJECT_DUMP_CONTROL* arg2)",
+   "base": "VOID (*DumpProcedure)(VOID* arg1, struct _OBJECT_DUMP_CONTROL* arg2)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 56,
+   "decl": "LONG (*OpenProcedure)(enum _OB_OPEN_REASON arg1, CHAR arg2, struct _EPROCESS* arg3, VOID* arg4, ULONG* arg5, ULONG arg6)",
+   "base": "LONG (*OpenProcedure)(enum _OB_OPEN_REASON arg1, CHAR arg2, struct _EPROCESS* arg3, VOID* arg4, ULONG* arg5, ULONG arg6)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 64,
+   "decl": "VOID (*CloseProcedure)(struct _EPROCESS* arg1, VOID* arg2, ULONGLONG arg3, ULONGLONG arg4)",
+   "base": "VOID (*CloseProcedure)(struct _EPROCESS* arg1, VOID* arg2, ULONGLONG arg3, ULONGLONG arg4)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 72,
+   "decl": "VOID (*DeleteProcedure)(VOID* arg1)",
+   "base": "VOID (*DeleteProcedure)(VOID* arg1)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 80,
+   "decl": "LONG (*ParseProcedure)(VOID* arg1, VOID* arg2, struct _ACCESS_STATE* arg3, CHAR arg4, ULONG arg5, struct _UNICODE_STRING* arg6, struct _UNICODE_STRING* arg7, VOID* arg8, struct _SECURITY_QUALITY_OF_SERVICE* arg9, VOID** arg10)",
+   "base": "LONG (*ParseProcedure)(VOID* arg1, VOID* arg2, struct _ACCESS_STATE* arg3, CHAR arg4, ULONG arg5, struct _UNICODE_STRING* arg6, struct _UNICODE_STRING* arg7, VOID* arg8, struct _SECURITY_QUALITY_OF_SERVICE* arg9, VOID** arg10)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 80,
+   "decl": "LONG (*ParseProcedureEx)(VOID* arg1, VOID* arg2, struct _ACCESS_STATE* arg3, CHAR arg4, ULONG arg5, struct _UNICODE_STRING* arg6, struct _UNICODE_STRING* arg7, VOID* arg8, struct _SECURITY_QUALITY_OF_SERVICE* arg9, struct _OB_EXTENDED_PARSE_PARAMETERS* arg10, VOID** arg11)",
+   "base": "LONG (*ParseProcedureEx)(VOID* arg1, VOID* arg2, struct _ACCESS_STATE* arg3, CHAR arg4, ULONG arg5, struct _UNICODE_STRING* arg6, struct _UNICODE_STRING* arg7, VOID* arg8, struct _SECURITY_QUALITY_OF_SERVICE* arg9, struct _OB_EXTENDED_PARSE_PARAMETERS* arg10, VOID** arg11)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 88,
+   "decl": "LONG (*SecurityProcedure)(VOID* arg1, enum _SECURITY_OPERATION_CODE arg2, ULONG* arg3, VOID* arg4, ULONG* arg5, VOID** arg6, enum _POOL_TYPE arg7, struct _GENERIC_MAPPING* arg8, CHAR arg9)",
+   "base": "LONG (*SecurityProcedure)(VOID* arg1, enum _SECURITY_OPERATION_CODE arg2, ULONG* arg3, VOID* arg4, ULONG* arg5, VOID** arg6, enum _POOL_TYPE arg7, struct _GENERIC_MAPPING* arg8, CHAR arg9)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 96,
+   "decl": "LONG (*QueryNameProcedure)(VOID* arg1, UCHAR arg2, struct _OBJECT_NAME_INFORMATION* arg3, ULONG arg4, ULONG* arg5, CHAR arg6)",
+   "base": "LONG (*QueryNameProcedure)(VOID* arg1, UCHAR arg2, struct _OBJECT_NAME_INFORMATION* arg3, ULONG arg4, ULONG* arg5, CHAR arg6)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "(anon)",
+   "offset": 104,
+   "decl": "UCHAR (*OkayToCloseProcedure)(struct _EPROCESS* arg1, VOID* arg2, VOID* arg3, CHAR arg4)",
+   "base": "UCHAR (*OkayToCloseProcedure)(struct _EPROCESS* arg1, VOID* arg2, VOID* arg3, CHAR arg4)",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "WaitObjectFlagMask",
+   "offset": 112,
+   "decl": "ULONG WaitObjectFlagMask",
+   "base": "ULONG",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "WaitObjectFlagOffset",
+   "offset": 116,
+   "decl": "USHORT WaitObjectFlagOffset",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  },
+  {
+   "name": "WaitObjectPointerOffset",
+   "offset": 118,
+   "decl": "USHORT WaitObjectPointerOffset",
+   "base": "USHORT",
+   "pointer": false,
+   "bitfield": false,
+   "array": null
+  }
+ ]
+}
