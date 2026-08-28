@@ -41,12 +41,12 @@ export function createLinuxDebugger(session, out) {
       write(`[gdb] starting gdbserver on ttyS1: ${path}${extra ? " " + extra : ""}`, "dim");
       // Probe guest before we waste 15s on RSP timeouts: is gdbserver present
       // and does the target exist? These echos appear on the guest console.
-      linux.sendLine(`which gdbserver >/dev/null 2>&1 && echo "[gdb-probe] gdbserver: ok" || echo "[gdb-probe] gdbserver: MISSING (rebuild image with BR2_PACKAGE_GDB_SERVER)"`);
-      linux.sendLine(`ls -l ${path} 2>&1 | head -1; echo "[gdb-probe] target check done"`);
-      linux.sendLine(`ls -l /dev/ttyS1 2>&1 | head -1; echo "[gdb-probe] ttyS1 check done"`);
+      await linux.sendLine(`which gdbserver >/dev/null 2>&1 && echo "[gdb-probe] gdbserver: ok" || echo "[gdb-probe] gdbserver: MISSING (rebuild image with BR2_PACKAGE_GDB_SERVER)"`);
+      await linux.sendLine(`ls -l ${path} 2>&1 | head -1; echo "[gdb-probe] target check done"`);
+      await linux.sendLine(`ls -l /dev/ttyS1 2>&1 | head -1; echo "[gdb-probe] ttyS1 check done"`);
       // Give the guest a tick to print probes before we steal ttyS1
       await new Promise((r) => setTimeout(r, 600));
-      linux.sendLine(sub === "start"
+      await linux.sendLine(sub === "start"
         ? `gdbserver /dev/ttyS1 ${path} ${extra}`.trim()
         : `gdbserver --attach /dev/ttyS1 ${path}`);
 
@@ -93,7 +93,7 @@ export function createLinuxDebugger(session, out) {
         return handleGdb(trimmed.split(/\s+/).slice(1));
       }
       write(`${PROMPT}${trimmed}`, "prompt");
-      try { linux.sendLine(trimmed); } catch (e) { write(`error: ${e.message}`, "err"); }
+      try { await linux.sendLine(trimmed); } catch (e) { write(`error: ${e.message}`, "err"); }
     },
     write,
     get gdb() { return gdb; },
@@ -141,7 +141,7 @@ export function attachLinuxEditor(ui) {
     (async () => {
       await session.linux.injectFile("/root/lab/student.c", new TextEncoder().encode(src));
       for (const line of guestBuildSequence("student")) {
-        session.linux.sendLine(line);
+        await session.linux.sendLine(line);
       }
       ui.status("✓ shipped; build+insmod running — watch the console", "good");
     })().catch((e) => ui.status(`ship failed: ${e.message}`, "err"));
