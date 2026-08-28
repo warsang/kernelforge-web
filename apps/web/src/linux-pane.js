@@ -31,6 +31,18 @@ export function createLinuxDebugger(session, out) {
     out.scrollTop = out.scrollHeight;
   }
 
+  // Poll serial for a substring (covers both buffered and line-split output)
+  async function waitForSerialText(substr, timeoutMs = 3000) {
+    const start = Date.now();
+    const want = String(substr);
+    while (Date.now() - start < timeoutMs) {
+      const raw = (linux.serial.text || "") + "\n" + (linux.serial.buffer || "");
+      if (raw.includes(want)) return true;
+      await new Promise((r) => setTimeout(r, 150));
+    }
+    return false;
+  }
+
   async function handleGdb(args) {
     const sub = args[0];
     if (sub === "start" || sub === "attach") {
@@ -41,14 +53,25 @@ export function createLinuxDebugger(session, out) {
       write(`[gdb] starting gdbserver on ttyS1: ${path}${extra ? " " + extra : ""}`, "dim");
       // Probe guest before we waste 15s on RSP timeouts: is gdbserver present
       // and does the target exist? These echos appear on the guest console.
-      await linux.sendLine(`which gdbserver >/dev/null 2>&1 && echo "[gdb-probe] gdbserver: ok" || echo "[gdb-probe] gdbserver: MISSING (rebuild image with BR2_PACKAGE_GDB_SERVER)"`);
-      await linux.sendLine(`ls -l ${path} 2>&1 | head -1; echo "[gdb-probe] target check done"`);
-      await linux.sendLine(`ls -l /dev/ttyS1 2>&1 | head -1; echo "[gdb-probe] ttyS1 check done"`);
-      // Give the guest a tick to print probes before we steal ttyS1
-      await new Promise((r) => setTimeout(r, 600));
+      // Keep probes short to stay well under the 16550 FIFO even with
+      // throttling; wait for each marker before sending the next so the
+      // guest's sh can drain the previous command.
+      await linux.sendLine(`which gdbserver >/dev/null 2>&1 && echo GDB_OK || echo GDB_MISS`);
+      await waitForSerialText("GDB_", 2500);
+      await new Promise((r) => setTimeout(r, 250));
+      await linux.sendLine(`ls -l ${path} 2>&1 | head -1; echo TGT_DONE`);
+      await waitForSerialText("TGT_DONE", 2500);
+      await new Promise((r) => setTimeout(r, 250));
+      await linux.sendLine(`ls -l /dev/ttyS1 2>&1 | head -1; echo TTY_DONE`);
+      await waitForSerialText("TTY_DONE", 2500);
+      await new Promise((r) => setTimeout(r, 400));
       await linux.sendLine(sub === "start"
         ? `gdbserver /dev/ttyS1 ${path} ${extra}`.trim()
         : `gdbserver --attach /dev/ttyS1 ${path}`);
+      // gdbserver prints "Listening on ..." to ttyS0 and then owns ttyS1 for
+      // RSP. Wait for that banner before we steal the line, otherwise the
+      // first qSupported races the target's startup.
+      await waitForSerialText("Listening", 3000);
 
       // Retry attach with exponential backoff (gdbserver may take time to bind)
       const maxAttempts = 5;
@@ -92,7 +115,12 @@ export function createLinuxDebugger(session, out) {
       if (/^gdb\b/.test(trimmed)) {
         return handleGdb(trimmed.split(/\s+/).slice(1));
       }
-      write(`${PROMPT}${trimmed}`, "prompt");
+      // xterm already echoes the typed line via term.write during onData;
+      // writing it again would duplicate `guest> ls` twice. Fallback console
+      // (happy-dom / headless) has no inline echo, so it needs the explicit
+      // prompt line. Detect via the adapter kind set by createDebugConsole.
+      const isXterm = out?.kind === "xterm" || out?.element?.classList?.contains?.("console-xterm");
+      if (!isXterm) write(`${PROMPT}${trimmed}`, "prompt");
       try { await linux.sendLine(trimmed); } catch (e) { write(`error: ${e.message}`, "err"); }
     },
     write,
