@@ -30,7 +30,8 @@ export default defineConfig({
     },
   },
   build: { outDir: "dist", target: "es2022" },
-  // Flag hashes are precomputed constants in the catalog; window.process shim
-  // kept for compatibility with older content packages.
-  define: { "process.env": "window.process.env" },
+  // v86's libv86.js does `if (typeof process !== "undefined") global.setImmediate`
+  // which would ReferenceError in browsers where `process` is polyfilled but
+  // `global` is not. Shim `global` to `globalThis` and keep `process.env` minimal.
+  define: { "process.env": "{}", global: "globalThis" },
 });
