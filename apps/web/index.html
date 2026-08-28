@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KernelForge — Windows Kernel Labs</title>
   <script>
+    // v86's libv86.js does `if (typeof process !== "undefined") global.setImmediate`
+    // in browsers where `process` is polyfilled (vite) but `global` is not.
+    // Shim both so the emulator's `G.yield` does not ReferenceError/TypeError.
+    window.global = window.globalThis;
+    if (!window.global.setImmediate) {
+      window.global.setImmediate = function (fn, ...args) { return setTimeout(fn, 0, ...args); };
+    }
+    if (!window.global.clearImmediate) {
+      window.global.clearImmediate = function (id) { clearTimeout(id); };
+    }
+    window.process = window.process || { env: {} };
+    window.process.env = window.process.env || {};
     // Dev answer defaults: catalog hashes these at module load (answers are
     // normalized trim+lowercase before hashing). Override per environment
     // (real deployments inject hashed answers at content build).
-    window.process = {
-      env: {
-        KF_FLAG_M1L1F1: "kfprobe.sys",
-        KF_FLAG_M1L1F2: "312",
-        KF_FLAG_M1L2F1: "0xffffc80000001448",
-      },
-    };
+    window.process.env.KF_FLAG_M1L1F1 = "kfprobe.sys";
+    window.process.env.KF_FLAG_M1L1F2 = "312";
+    window.process.env.KF_FLAG_M1L2F1 = "0xffffc80000001448";
   </script>
 </head>
 <body>
