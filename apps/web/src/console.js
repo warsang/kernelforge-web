@@ -25,7 +25,7 @@ const SGR = {
   prompt: "\x1b[38;2;139;148;158m", // --dim
 };
 
-const PROMPT = "kd> ";
+const DEFAULT_PROMPT = "kd> ";
 
 /** Consoles alive across lesson re-renders; disposed on next render. */
 const live = [];
@@ -49,12 +49,12 @@ function isHeadlessDom() {
 
 // ------------------------------------------------------------- legacy path
 
-function createFallbackConsole(container, { onSubmit }) {
+function createFallbackConsole(container, { onSubmit, prompt = DEFAULT_PROMPT, placeholder }) {
   const out = document.createElement("div");
   out.className = "console";
   const input = document.createElement("input");
   input.className = "cmd";
-  input.placeholder = "kd> command…  (help, lm, !process 0 0, r, db <addr>, dq <addr>, !eproc <addr|pid>)";
+  input.placeholder = placeholder ?? `${prompt}command…  (help, lm, !process 0 0, r, db <addr>, dq <addr>, !eproc <addr|pid>)`;
   input.addEventListener("keydown", (ev) => {
     if (ev.key !== "Enter") return;
     const line = input.value;
@@ -89,7 +89,7 @@ function createFallbackConsole(container, { onSubmit }) {
 
 // -------------------------------------------------------------- xterm path
 
-async function createXtermConsole(container, { onSubmit }) {
+async function createXtermConsole(container, { onSubmit, prompt = DEFAULT_PROMPT }) {
   const [{ Terminal }, { FitAddon }] = await Promise.all([
     import("@xterm/xterm"),
     import("@xterm/addon-fit"),
@@ -126,7 +126,7 @@ async function createXtermConsole(container, { onSubmit }) {
   let adapter = null;
 
   const redrawPromptLine = () => {
-    term.write("\r\x1b[2K" + "\x1b[38;2;139;148;158m" + PROMPT + "\x1b[0m" + lineBuf);
+    term.write("\r\x1b[2K" + "\x1b[38;2;139;148;158m" + prompt + "\x1b[0m" + lineBuf);
   };
 
   term.onData((data) => {
@@ -205,14 +205,17 @@ async function createXtermConsole(container, { onSubmit }) {
 /**
  * Build the lab console inside `container`.
  * Resolves to the adapter described at the top of this file.
+ * @param {object} opts
+ * @param {string} [opts.prompt] - input prompt (e.g. "kd> " or "guest> ")
+ * @param {string} [opts.placeholder]
  */
-export async function createDebugConsole(container, { onSubmit }) {
+export async function createDebugConsole(container, { onSubmit, prompt, placeholder }) {
   if (!isHeadlessDom()) {
     try {
-      return await createXtermConsole(container, { onSubmit });
+      return await createXtermConsole(container, { onSubmit, prompt });
     } catch {
       // xterm unavailable (offline bundle, odd embed) — degrade gracefully
     }
   }
-  return createFallbackConsole(container, { onSubmit });
+  return createFallbackConsole(container, { onSubmit, prompt, placeholder });
 }

@@ -651,14 +651,16 @@ function renderLesson(lesson) {
       renderFlagInputs(card, lab, lesson);
       continue;
     }
-    // xterm.js-backed kd> console (div fallback in headless DOMs); input is
+    const pane = paneFor(lab.kind) ?? {};
+    // xterm.js-backed console (inq fallback in headless DOMs); input is
     // inline — every submitted line routes to currentDebugger.exec.
+    // Prompt is per-pane: linux shows "guest> ", windbg shows "kd> ".
     const consoleHost = h("div", { class: "console-host" });
     const consoleReady = createDebugConsole(consoleHost, {
       onSubmit: (line) => currentDebugger?.exec(line),
+      prompt: pane.prompt ?? "kd> ",
+      placeholder: pane.placeholder,
     });
-
-    const pane = paneFor(lab.kind) ?? {};
     const backends = pane.backends ?? [
       { value: "js", label: "CPU: JsInterpreter (deterministic)" },
       { value: "unicorn", label: "CPU: Unicorn (QEMU wasm)" },

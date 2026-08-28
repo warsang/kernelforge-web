@@ -29,15 +29,22 @@ export function validateLinuxSource(source) {
 /**
  * Canonical guest-side sequence for building + loading a student module.
  * Sent line-by-line via V86LabSession.sendLine().
+ * Prefers Kbuild (`make -C $KDIR M=...`) which produces a proper .ko with
+ * modinfo, but falls back to the minimal `gcc -c` hack that works against
+ * the staged headers (see scripts/build-buildroot.sh).
  * @param {string} name module base name, e.g. "kflag"
  */
 export function guestBuildSequence(name) {
   const KDIR = "/lib/modules/$(uname -r)/build";
   return [
     `cd /root/lab`,
-    `${name}.c`, // file already injected; nothing to do for it
-    `gcc -O2 -c ${name}.c -o ${name}.o -I${KDIR}/include -I${KDIR}/arch/x86/include -D__KERNEL__`,
-    `insmod ${name}.o || insmod ./${name}.o`,
-    `dmesg | tail -20`,
-  ].filter((l) => !/^\S+\.c$/.test(l));
+    `ls -lh ${name}.c`,
+    // try Kbuild first (proper .ko); fallback to gcc -c if KDIR/Makefile missing
+    `if [ -f "${KDIR}/Makefile" ]; then echo "Kbuild: \\$KDIR=$KDIR"; echo 'obj-m := ${name}.o' > /tmp/kbuild.mk && make -C ${KDIR} M=/root/lab -f /tmp/kbuild.mk src=/root/lab 2>&1 | tail -20; else echo "Kbuild not available, using gcc -c fallback"; gcc -O2 -c ${name}.c -o ${name}.o -I${KDIR}/include -I${KDIR}/arch/x86/include -D__KERNEL__ 2>&1 | tail -20; fi`,
+    `ls -lh ${name}.ko ${name}.o 2>&1 | head -5`,
+    `insmod ${name}.ko 2>&1 || insmod ${name}.o 2>&1 || insmod ./${name}.o 2>&1 || insmod ./${name}.ko 2>&1`,
+    `echo "[host] insmod exit code: $?"`,
+    `dmesg | tail -30`,
+    `lsmod | head -20`,
+  ];
 }

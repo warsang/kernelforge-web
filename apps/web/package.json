@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node ../../tools/copy-v86-artifacts.mjs || true",
     "build": "vite build",
+    "postbuild": "node ../../tools/copy-v86-artifacts.mjs || true",
     "preview": "vite preview",
     "test": "node --test test/*.test.mjs"
   },

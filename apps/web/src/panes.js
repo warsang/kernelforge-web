@@ -115,6 +115,8 @@ function mountShellViews(ctx, dbgSession, title, decompiler = null) {
 
 // --- linux-kernel: v86 buildroot guest --------------------------------------
 registerPane("linux", {
+  prompt: "guest> ",
+  placeholder: "guest> command…  (ls, cat /proc/modules, dmesg | tail, gdb start /bin/sh)",
   backends: [
     { value: "v86", label: "Guest: v86 i386 Linux (buildroot)" },
   ],
@@ -134,8 +136,8 @@ registerPane("linux", {
     const placeholder = document.createElement("div");
     placeholder.className = "dim dbg-note pad";
     placeholder.textContent =
-      'gdb bridge idle — run "gdb start /root/lab/app" in the guest console ' +
-      "(buildroot image must include gdb-server).";
+      'gdb bridge idle — kernel labs use insmod; for userspace debugging run "gdb start /bin/sh" ' +
+      '(or "gdb start /root/lab/app") in the guest console (buildroot image must include gdbserver).';
     ctx.shellHost.append(placeholder);
 
     let shell = null;

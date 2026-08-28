@@ -12,11 +12,14 @@ packages/ntsim-assets/data/*.bin
 !packages/ntsim-assets/data/.gitkeep
 apps/web/public/assets/*.bin
 
-# v86 guest image + buildroot tree are build artifacts (see packages/v86-lab/vendor/README.md)
+# v86 guest image build tree is never committed (see packages/v86-lab/vendor/README.md)
+# The built image itself IS committed as a static asset via the symlink
+# apps/web/public/vendor -> packages/v86-lab/vendor so that Pages deploys are
+# self-contained (fetch vendor/artifacts/bzImage) like https://copy.sh/v86/.
+# Keep it small; regenerate with:
+#   ./packages/v86-lab/scripts/build-buildroot.sh && node tools/copy-v86-artifacts.mjs
 packages/v86-lab/build/
 packages/v86-lab/artifacts/
-packages/v86-lab/vendor/artifacts/
-apps/web/public/vendor/artifacts/
 
 # ghidra decompiler wasm (pyre pipeline output — rebuild via `npm run vendor:ghidra`,
 # see packages/ghidra-decompiler/vendor/README.md; the shim itself IS committed)
@@ -24,4 +27,3 @@ apps/web/public/vendor/ghidra/
 
 # tmpout research cache (scrape via `node tools/scrape-tmpout.mjs`)
 .cache/
-.secrets.env

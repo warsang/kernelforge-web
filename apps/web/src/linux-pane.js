@@ -34,12 +34,22 @@ export function createLinuxDebugger(session, out) {
   async function handleGdb(args) {
     const sub = args[0];
     if (sub === "start" || sub === "attach") {
-      const path = args[1] ?? "/root/lab/app";
-      write(`[gdb] starting gdbserver on ttyS1: ${path}`, "dim");
+      // Kernel labs primarily use insmod; GDB is for userspace targets.
+      // Canonical demo is /bin/sh; keep /root/lab/app as alias for old docs.
+      const path = args[1] ?? "/bin/sh";
+      const extra = args.slice(2).join(" ");
+      write(`[gdb] starting gdbserver on ttyS1: ${path}${extra ? " " + extra : ""}`, "dim");
+      // Probe guest before we waste 15s on RSP timeouts: is gdbserver present
+      // and does the target exist? These echos appear on the guest console.
+      linux.sendLine(`which gdbserver >/dev/null 2>&1 && echo "[gdb-probe] gdbserver: ok" || echo "[gdb-probe] gdbserver: MISSING (rebuild image with BR2_PACKAGE_GDB_SERVER)"`);
+      linux.sendLine(`ls -l ${path} 2>&1 | head -1; echo "[gdb-probe] target check done"`);
+      linux.sendLine(`ls -l /dev/ttyS1 2>&1 | head -1; echo "[gdb-probe] ttyS1 check done"`);
+      // Give the guest a tick to print probes before we steal ttyS1
+      await new Promise((r) => setTimeout(r, 600));
       linux.sendLine(sub === "start"
-        ? `gdbserver /dev/ttyS1 ${path} ${args.slice(2).join(" ")}`.trim()
+        ? `gdbserver /dev/ttyS1 ${path} ${extra}`.trim()
         : `gdbserver --attach /dev/ttyS1 ${path}`);
-      
+
       // Retry attach with exponential backoff (gdbserver may take time to bind)
       const maxAttempts = 5;
       let lastError = null;
@@ -59,8 +69,11 @@ export function createLinuxDebugger(session, out) {
         }
       }
       write(`[gdb] attach failed after ${maxAttempts} attempts: ${lastError?.message}`, "err");
-      write("[gdb] troubleshooting: is gdbserver built into this image? (BR2_PACKAGE_GDB_SERVER)", "dim");
-      write("[gdb] check: run 'which gdbserver' in the guest console", "dim");
+      write("[gdb] troubleshooting:", "dim");
+      write("  1) run `which gdbserver` — if missing, rebuild image (see vendor/README.md)", "dim");
+      write("  2) run `ls -l /dev/ttyS1` — should exist (CONFIG_SERIAL_8250_NR_UARTS=4)", "dim");
+      write(`  3) run \`ls -l ${path}\` — target must exist. Try: gdb start /bin/sh`, "dim");
+      write("  4) check guest console for [gdb-probe] lines above", "dim");
       return;
     }
     if (sub === "detach" && gdb) {
