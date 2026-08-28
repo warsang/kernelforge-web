@@ -542,7 +542,8 @@ function renderWelcome() {
   main.innerHTML = "";
   main.append(
     h("div", { class: "card" },
-      h("h1", null, "Windows Kernel Fundamentals"),
+      h("h1", null, "Kernel Fundamentals"),
+      h("p", null, "Hi! This course was entirely AI generated and is still a work in progress. I haven't gone through every module yet and honestly, some of the labs are pretty bad. I initially built this for two reasons: 1) I wanted to brush up on my Windows Internals 2) I have a ton of articles in my reading backlog that I will probably never get to and I still wanted to cover the concepts or get an idea of what the technique is. These little modules try to cover the concepts introduced by these articles and give a semi/fake hands-on lab where you can practice the skill without having to spin up a Windows VM, configure serial debugging and attach windbg to it to end up having to reboot the VM 10 times because serial just stops working for some reason. If this whole experience sounds familiar, then feel free to poke around and report any issues you find on GitHub. Just be aware the labs and course are still very much in their POC phase and will likely change quite a bit as I update and polish this project."),
       h("p", null, "Pick a lesson from the sidebar. Labs boot a real x64 Windows " +
         "kernel model in your browser — inspect it with the debugger console, " +
         "solve the objectives, submit flags."),
