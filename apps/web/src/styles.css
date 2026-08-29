@@ -79,9 +79,21 @@ button:disabled { opacity: 0.5; cursor: wait; }
 .console .dim { color: var(--dim); }
 
 .console-host { margin-top: 6px; }
-.console-xterm { padding: 6px 8px; overflow: hidden; white-space: normal; }
-.console-xterm .xterm,
-.console-xterm .xterm-viewport { height: 100% !important; }
+.console-xterm {
+  padding: 6px 8px;
+  overflow: hidden;
+  white-space: normal;
+  height: 300px;
+  /* Let wheel events bubble to #main when the terminal is at scroll limits
+     (overscroll-behavior: contain would trap them; auto allows chaining) */
+  overscroll-behavior: auto;
+}
+.console-xterm .xterm { height: 100% !important; }
+.console-xterm .xterm-viewport {
+  height: 100% !important;
+  overflow-y: auto !important;
+  overscroll-behavior: auto;
+}
 
 .flag {
   border-top: 1px dashed var(--border); margin-top: 14px; padding-top: 12px;
